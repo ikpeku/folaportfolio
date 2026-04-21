@@ -144,7 +144,9 @@ const Rukah = () => {
 
       </div>
 
-      <Footer isDetail={true} onClick={() => navigate("/zenith")} />
+      <Footer isDetail={true} onClick={() => navigate("/zenith")}
+      description="Designing an AI professional development platform to help educators grow."
+      />
     </div>
   );
 };

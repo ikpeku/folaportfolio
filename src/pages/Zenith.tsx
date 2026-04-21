@@ -139,7 +139,9 @@ const Zenith = () => {
 
       </div>
 
-      <Footer isDetail={true} onClick={() => navigate("/kibo-school")} />
+      <Footer isDetail={true} onClick={() => navigate("/kibo-school")}
+      description="Designing a learning platform to support a fully remote BSc. Computer Science Degree."
+      />
     </div>
   );
 };

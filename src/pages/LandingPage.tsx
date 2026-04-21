@@ -6,7 +6,7 @@ import type { Transition } from "framer-motion";
 import Assets from "../assets";
 import Footer from "../component/Footer";
 
-const PaperPlaneEmoji = ({icon}) => (
+const PaperPlaneEmoji = ({ icon }: { icon: React.ReactNode }) => (
   <span aria-hidden className="inline-block ml-1 translate-y-px">{icon}</span>
 );
 
@@ -19,7 +19,7 @@ const scrollFadeUp = {
 
 // ——————————————————— Section components ———————————————————
 
-const SelectedProjectsHeader = ({icon, title}) => (
+const SelectedProjectsHeader = ({ icon, title }: { icon: React.ReactNode; title: string }) => (
   <motion.h2 className="text-[20px] font-semibold mt-16" {...scrollFadeUp}>
     {title} <PaperPlaneEmoji icon={icon} />
   </motion.h2>

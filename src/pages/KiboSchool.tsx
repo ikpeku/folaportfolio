@@ -28,7 +28,7 @@ const SectionLabel = ({ children, className }: { children: React.ReactNode; clas
   <p className={`text-[10px] md:text-[14px] tracking-widest text-[#6A6A6A] font-semibold ${className ?? ""}`}>{children}</p>
 );
 
-const Divider = ({className}) => (
+const Divider = ({ className }: { className?: string }) => (
   <motion.div className={` border-t border-dashed border-neutral-200 ${className}`} {...fadeUp(0)} />
 );
 
@@ -132,7 +132,7 @@ const KiboSchool = () => {
       <div className="flex gap-12 items-start">
 
         {/* ── Sticky sidebar — desktop: text labels, mobile: dot strip ── */}
-        <aside className="shrink-0 sticky top-10 self-start">
+        <aside className="hidden lg:block shrink-0 sticky top-10 self-start">
 
           {/* Desktop */}
           <div className="hidden lg:flex flex-col gap-1 w-40 ">
@@ -155,6 +155,9 @@ const KiboSchool = () => {
             ))}
           </div>
 
+
+        </aside>
+
           {/* Mobile — vertical dot strip */}
           <div className="lg:hidden fixed right-4 top-1/2 -translate-y-1/2 z-40 flex flex-col items-center gap-2">
             {NAV_ITEMS.map((item) => (
@@ -171,7 +174,6 @@ const KiboSchool = () => {
             ))}
           </div>
 
-        </aside>
 
         {/* ── Main content ── */}
         <main className="flex-1 min-w-0 space-y-16">
@@ -443,7 +445,9 @@ const KiboSchool = () => {
 
         </main>
       </div>
-      <Footer isDetail={true} onClick={() => navigate("/time-study")} />
+      <Footer isDetail={true} onClick={() => navigate("/time-study")}
+      description="Helping healthcare practitioners track their time so they can be appropriately reimbursed by the government"
+      />
     </div>
   );
 };
