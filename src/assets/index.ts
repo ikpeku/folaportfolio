@@ -11,6 +11,7 @@ import Avatar from "./avatar.png";
 import Iceshot from "./iceshot.png";
 import Aidesignone from "./aidesignone.png";
 import Aidesigntwo from "./aidesigntwo.png";
+import Diamondicon from "./diamondicon.png";
 
 // kiboschool
 import Kiboschoolbanner from "./kiboschool/kilboschoolbanner.png";
@@ -68,6 +69,49 @@ import Timestudyoperationtwo from "./timestudy/timestudyoperationtwo.png"
 import Timestudyoperationthree from "./timestudy/timestudyoperationthree.png"
 import Timestudyoperationfour from "./timestudy/timestudyoperationfour.png"
 
+
+import Beholdbanner from "./behold/beholdbanner.png"
+import Beholdcontextone from "./behold/beholdcontextone.png"
+import Beholdcontexttwo from "./behold/beholdcontexttwo.png"
+import Beholdcontextthree from "./behold/beholdcontextthree.png"
+import Beholdcontextfour from "./behold/beholdcontextfour.png"
+import Beholdcontextfive from "./behold/beholdcontextfive.png"
+import Beholdcontextsix from "./behold/beholdcontextsix.png"
+import Beholdcontextseven from "./behold/beholdcontextseven.png"
+
+import Beholdrresearchone from "./behold/beholdrresearchone.png"
+import Beholdrresearchtwo from "./behold/beholdrresearchtwo.png"
+import Beholdrresearchthree from "./behold/beholdrresearchthree.png"
+
+import Beholdexplorationsone from "./behold/beholdexplorationsone.png"
+import Beholdexplorationstwo from "./behold/beholdexplorationstwo.png"
+import Beholdexplorationsthree from "./behold/beholdexplorationsthree.png"
+import Beholdexplorationsfour from "./behold/beholdexplorationsfour.png"
+import Beholdexplorationsfive from "./behold/beholdexplorationsfive.png"
+import Beholdexplorationssix from "./behold/beholdexplorationssix.png"
+
+
+import Beholddesignone from "./behold/beholddesignone.png"
+import Beholddesigntwo from "./behold/beholddesigntwo.png"
+import Beholddesignthree from "./behold/beholddesignthree.png"
+import Beholddesignfour from "./behold/beholddesignfour.png"
+import Beholddesignfive from "./behold/beholddesignfive.png"
+import Beholddesignsix from "./behold/beholddesignsix.png"
+import Beholddesignseven from "./behold/beholddesignseven.png"
+import Beholddesigneight from "./behold/beholddesigneight.png"
+import Beholddesignnine from "./behold/beholddesignnine.gif"
+
+
+
+
+
+
+
+
+
+
+
+
 const Assets = {
   Logo,
   HeroBanner,
@@ -85,6 +129,7 @@ const Assets = {
   ResumeIcon,
   EmailIcon,
   LinkedInIcon,
+  Diamondicon,
 
   // Kiboschool
   Kiboschoolbanner,
@@ -137,7 +182,41 @@ Timestudybuildhandoverseven,
 Timestudyoperationone,
 Timestudyoperationtwo,
 Timestudyoperationthree,
-Timestudyoperationfour
+Timestudyoperationfour,
+
+// behold
+Beholdbanner,
+Beholdcontextone,
+Beholdcontexttwo,
+Beholdcontextthree,
+Beholdcontextfour,
+Beholdcontextfive,
+Beholdcontextsix,
+Beholdcontextseven,
+
+Beholdrresearchone,
+Beholdrresearchtwo,
+Beholdrresearchthree,
+
+Beholdexplorationsone,
+Beholdexplorationstwo,
+Beholdexplorationsthree,
+Beholdexplorationsfour,
+Beholdexplorationsfive,
+Beholdexplorationssix,
+
+
+Beholddesignone,
+Beholddesigntwo,
+Beholddesignthree,
+Beholddesignfour,
+Beholddesignfive,
+Beholddesignsix,
+Beholddesignseven,
+Beholddesigneight,
+Beholddesignnine
+
+
 
 } as const;
 
