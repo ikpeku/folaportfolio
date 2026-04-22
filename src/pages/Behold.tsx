@@ -4,7 +4,6 @@ import type { Transition } from "framer-motion";
 import Assets from "../assets";
 import Footer from "../component/Footer";
 import { useNavigate } from "react-router";
-// import Carousel from "../component/Carousel";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -56,19 +55,9 @@ const LearnItem = ({ icon, text }: { icon: string; text: string }) => (
 );
 
 
-// ,
-// ,
-// ,
-// ,
-// Beholddesignfive,
-// Beholddesignsix,
-// Beholddesignseven,
-// Beholddesigneight,
-// Beholddesignnine
-
 const DESIGNSCREENS = [
   {
-    url: Assets.Beholddesignone, 
+    url: Assets.Beholddesignone,
     caption: "Option 1",
     description: "Combining both actions in one screen starting off with a call to reflect after which users are asked to share. "
   },
@@ -82,52 +71,9 @@ const DESIGNSCREENS = [
   },
   {
     url: Assets.Beholddesignfour,
-    
+
   },
 ];
-
-
-// const SolutionSCREENS = [
-//   {
-//     title: "1. Activity Selection",
-//     caption: "The activity list shows color and icon coded activities assigned by admins so that over time practitioners build visual memory and can start time tracking even faster.",
-//     urls: [Assets.Timestudysolutionone, Assets.Timestudysolutiontwo],
-//   },
-//   {
-//     title: "2. Time Tracking",
-//     caption: "One tap to start and stop tracking with no confirmation dialogs. A persistent lock screen notification keeps the timer accessible when the phone is pocketed mid-task.",
-//     urls: [Assets.Timestudysolutionthree, Assets.Timestudysolutionfour],
-//   },
-//   {
-//     title: "3. Activity Session Summaries",
-//     caption: "Every completed session shows activity name, category and duration. Sessions auto-sync to Time Study Inc's web platform in real time so that admins can see data as it's recorded rather than waiting two weeks. Practitioners can edit sessions directly if they make mistakes.",
-//     urls: [Assets.Timestudysolutionfive, Assets.Timestudysolutionsix],
-//   },
-//   {
-//     title: "4. Detailed Summaries & Sharing",
-//     caption: "Practitioners can share detailed breakdowns of how they spent their time across specific time periods with admins.",
-//     urls: [Assets.Timestudysolutionseven, Assets.Timestudysolutioneight],
-//   },
-// ];
-
-// const BuildHandover = [
-//   {
-//     title: "1. Organzation Switcher",
-//     caption: "Practitioners working at multiple organizations using TS Inc’s services needed to be able to switch organizations upfront rather than in settings.",
-//     urls: [Assets.Timestudybuildhandoverone, Assets.Timestudybuildhandovertwo],
-//   },
-//   {
-//     title: "2. Manual Activity Logging",
-//     caption: "For practitioners who forget to track their time or who would rather focus on their core duties at work the app needed an escape hatch. Manual logging lets them select an activity, set start and end times then save. Manually logged activities sync and appear to admins identically to real-time sessions, removing any stigma from forgetting. Validations on the backend prevent overlapping entries.",
-//     urls: [Assets.Timestudybuildhandoverthree, Assets.Timestudybuildhandoverfour],
-//   },
-//   {
-//     title: "3. Sync Status",
-//     caption: "A visual indicator for sync status was added to activity session summaries to give practitioners confidence their data is reaching admins. The app had a built in mechanism to continuously retry failed sync until they’re successful but showing status upfront helped to eliminate uncertainty.",
-//     urls: [Assets.Timestudybuildhandoverfive, Assets.Timestudybuildhandoversix],
-//   },
-// ];
-
 
 
 const ContextPhotos = [
@@ -192,15 +138,7 @@ const GridImagesCard = ({ title, caption, urls }: { title: string; caption: stri
         />
       ))}
     </div>
-    {/* <div className={`mt-6 grid gap-4 ${urls.length > 1 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
-      {urls.map((url, i) => (
-        <ImageCard
-          key={i}
-          url={url}
-          className={`w-full${urls.length % 2 !== 0 && i === urls.length - 1 ? " md:col-span-2" : ""}`}
-        />
-      ))}
-    </div> */}
+    
   </div>
 )
 
@@ -394,7 +332,7 @@ const Behold = () => {
                 <p>We carried out user interviews with 12 active users focusing on their experience with the reflection feature and sharing. The interviews surfaced four findings across the two features with a common root cause.</p>
               </div>
 
-                <div className="mt-12 space-y-8 max-w-4xl">
+              <div className="mt-12 space-y-8 max-w-4xl">
 
                 <div>
                   <div className="flex items-end">
@@ -407,37 +345,37 @@ const Behold = () => {
                     <div className="flex">
 
                       <div className="flex flex-col items-center border border-[#E5E5E5] bg-[#F9FAFB] px-3">
-                    <p className="text-[14px] font-semibold text-[#6A6A6A] py-5">1</p>
-                    <div className="w-[0.1] border border-[#B1B1B8] flex-1 border-dashed" />
-                  </div>
+                        <p className="text-[14px] font-semibold text-[#6A6A6A] py-5">1</p>
+                        <div className="w-[0.1] border border-[#B1B1B8] flex-1 border-dashed" />
+                      </div>
 
-                    <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 space-y-4">
-                      <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#191919] ">
-                        Audio-only users forgot reflections existed
-                      </p>
-                      <p className="text-[14px] md:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">A significant portion of users listened while multitasking (i.e commuting, cooking, getting ready, etc). By the time the audio ended, they had moved on. The reflection prompt lived on a separate page they never reached.</p>
-                      <p className="border-l-[#211A4C] border-l-2 pl-4 italic text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
-                       "To be honest I didn't even realise there was a place to add reflections, I assumed the meditation ended."
-                      </p>
-                    </div>
+                      <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 space-y-4">
+                        <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#191919] ">
+                          Audio-only users forgot reflections existed
+                        </p>
+                        <p className="text-[14px] md:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">A significant portion of users listened while multitasking (i.e commuting, cooking, getting ready, etc). By the time the audio ended, they had moved on. The reflection prompt lived on a separate page they never reached.</p>
+                        <p className="border-l-[#211A4C] border-l-2 pl-4 italic text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                          "To be honest I didn't even realise there was a place to add reflections, I assumed the meditation ended."
+                        </p>
+                      </div>
                     </div>
 
                     <div className="flex">
 
                       <div className="flex flex-col items-center border border-[#E5E5E5] bg-[#F9FAFB] px-3">
-                    <p className="text-[14px] font-semibold text-[#6A6A6A] py-5">2</p>
-                    <div className="w-[0.1] border border-[#B1B1B8] flex-1 border-dashed" />
-                  </div>
+                        <p className="text-[14px] font-semibold text-[#6A6A6A] py-5">2</p>
+                        <div className="w-[0.1] border border-[#B1B1B8] flex-1 border-dashed" />
+                      </div>
 
-                    <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 space-y-4">
-                      <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#191919] ">
-                        Typing felt like too much effort
-                      </p>
-                      <p className="text-[14px] md:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">The core appeal of Behold was fitting prayer into a busy schedule. Typing a reflection felt like an extra task rather than a natural part of the experience.</p>
-                      <p className="border-l-[#211A4C] border-l-2 pl-4 italic text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
-                       "I’d like to use it but most times I don't feel like typing.”
-                      </p>
-                    </div>
+                      <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 space-y-4">
+                        <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#191919] ">
+                          Typing felt like too much effort
+                        </p>
+                        <p className="text-[14px] md:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">The core appeal of Behold was fitting prayer into a busy schedule. Typing a reflection felt like an extra task rather than a natural part of the experience.</p>
+                        <p className="border-l-[#211A4C] border-l-2 pl-4 italic text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                          "I’d like to use it but most times I don't feel like typing.”
+                        </p>
+                      </div>
                     </div>
 
                   </div>
@@ -456,35 +394,35 @@ const Behold = () => {
                     <div className="flex">
 
                       <div className="flex flex-col items-center border border-[#E5E5E5] bg-[#F9FAFB] px-3">
-                    <p className="text-[14px] font-semibold text-[#6A6A6A] py-5">1</p>
-                    <div className="w-[0.1] border border-[#B1B1B8] flex-1 border-dashed" />
-                  </div>
+                        <p className="text-[14px] font-semibold text-[#6A6A6A] py-5">1</p>
+                        <div className="w-[0.1] border border-[#B1B1B8] flex-1 border-dashed" />
+                      </div>
 
-                    <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 space-y-4">
-                      <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#191919] ">
-                        Audio-only users missed the share icon entirely
-                      </p>
-                      <p className="text-[14px] md:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">The share icon sat on the meditation screen alongside a save icon. Audio-only users weren’t actively looking at the screen during meditations.</p>
-                    
-                    </div>
+                      <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 space-y-4">
+                        <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#191919] ">
+                          Audio-only users missed the share icon entirely
+                        </p>
+                        <p className="text-[14px] md:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">The share icon sat on the meditation screen alongside a save icon. Audio-only users weren’t actively looking at the screen during meditations.</p>
+
+                      </div>
                     </div>
 
                     <div className="flex">
 
                       <div className="flex flex-col items-center border border-[#E5E5E5] bg-[#F9FAFB] px-3">
-                    <p className="text-[14px] font-semibold text-[#6A6A6A] py-5">2</p>
-                    <div className="w-[0.1] border border-[#B1B1B8] flex-1 border-dashed" />
-                  </div>
+                        <p className="text-[14px] font-semibold text-[#6A6A6A] py-5">2</p>
+                        <div className="w-[0.1] border border-[#B1B1B8] flex-1 border-dashed" />
+                      </div>
 
-                    <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 space-y-4">
-                      <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#191919] ">
-                        Users who saw it didn't feel compelled to use it
-                      </p>
-                      <p className="text-[14px] md:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">For users who did read along with the scripture, the share icon was just a button on a page. There was no surrounding prompt, no moment, nothing that made sharing feel relevant or timely. Without a reason to act, most didn't.</p>
-                      <p className="border-l-[#211A4C] border-l-2 pl-4 italic text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
-                       "I notice it but I just don’t use it.”
-                      </p>
-                    </div>
+                      <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 space-y-4">
+                        <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#191919] ">
+                          Users who saw it didn't feel compelled to use it
+                        </p>
+                        <p className="text-[14px] md:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">For users who did read along with the scripture, the share icon was just a button on a page. There was no surrounding prompt, no moment, nothing that made sharing feel relevant or timely. Without a reason to act, most didn't.</p>
+                        <p className="border-l-[#211A4C] border-l-2 pl-4 italic text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                          "I notice it but I just don’t use it.”
+                        </p>
+                      </div>
                     </div>
 
                   </div>
@@ -493,24 +431,24 @@ const Behold = () => {
 
 
                 <div>
-                   <p className="font-medium text-[#3D3D4E] text-[14px] md:text-[18px] leading-6.75" >The interviews revealed a common thread across both features: users were missing them entirely. The reflection feature and the sharing both lived in parts of the experience that a large portion of users, especially those listening on the go, never reached. Addressing visibility was the shared starting point for solutions.</p>
-                    <div className="my-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {
-                    ResearchIMAGES.map(v => <ImageCard key={v.title} url={v.src} className="w-full border-3 border-[#FFC60B] rounded-lg " />)
-                  }
-                </div>
-                   
-                   <p className="max-w-lg mx-auto text-center font-medium text-[#3D3D4E] text-[14px] md:text-[16px] leading-6.75" >The three meditation screens showing the audio player (along with options to save and share), the scripture for the day and a space to reflect.</p>
+                  <p className="font-medium text-[#3D3D4E] text-[14px] md:text-[18px] leading-6.75" >The interviews revealed a common thread across both features: users were missing them entirely. The reflection feature and the sharing both lived in parts of the experience that a large portion of users, especially those listening on the go, never reached. Addressing visibility was the shared starting point for solutions.</p>
+                  <div className="my-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {
+                      ResearchIMAGES.map(v => <ImageCard key={v.title} url={v.src} className="w-full border-3 border-[#FFC60B] rounded-lg " />)
+                    }
+                  </div>
+
+                  <p className="max-w-lg mx-auto text-center font-medium text-[#3D3D4E] text-[14px] md:text-[16px] leading-6.75" >The three meditation screens showing the audio player (along with options to save and share), the scripture for the day and a space to reflect.</p>
 
                 </div>
 
-               
+
               </div>
 
             </motion.div>
           </section>
 
-    {/* ── FramingTheProblem ── */}
+          {/* ── FramingTheProblem ── */}
           <section id="FramingTheProblem">
             <motion.div {...fadeUp(0.1)}>
               <SectionLabel>Framing the Problem</SectionLabel>
@@ -526,7 +464,7 @@ const Behold = () => {
 
                 <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 border-l-2 border-l-[#211A4C]">
                   <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
-                   How might we...
+                    How might we...
                   </p>
                   <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Surface the reflection feature to users who are listening rather than looking at their screens?
@@ -537,8 +475,8 @@ const Behold = () => {
                   <p className="text-[16px] md:text-[18px] font-semibold leading-6 text-[#6A6A6A]">
                     How might we...
                   </p>
-                 <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
-                   Make adding a reflection feel less like extra work?
+                  <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
+                    Make adding a reflection feel less like extra work?
                   </p>
                 </div>
 
@@ -546,8 +484,8 @@ const Behold = () => {
                   <p className="text-[16px] md:text-[18px] font-semibold leading-6 text-[#6A6A6A]">
                     How might we...
                   </p>
-                 <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
-                  Surface the sharing option to users who are listening rather than reading?
+                  <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
+                    Surface the sharing option to users who are listening rather than reading?
                   </p>
                 </div>
 
@@ -555,8 +493,8 @@ const Behold = () => {
                   <p className="text-[16px] md:text-[18px] font-semibold leading-6 text-[#6A6A6A]">
                     How might we...
                   </p>
-                 <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
-                 Compel users to share?
+                  <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
+                    Compel users to share?
                   </p>
                 </div>
 
@@ -564,7 +502,7 @@ const Behold = () => {
 
               </div>
 
-            
+
 
             </motion.div>
           </section>
@@ -572,7 +510,7 @@ const Behold = () => {
 
 
 
-    {/* ── Explorations ── */}
+          {/* ── Explorations ── */}
           <section id="Explorations">
             <motion.div {...fadeUp(0.1)}>
               <SectionLabel>Explorations</SectionLabel>
@@ -589,50 +527,50 @@ const Behold = () => {
                 <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 flex items-center gap-4">
                   <img src={Assets.Diamondicon} className="w-4 h-4" />
                   <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
-                   Does it address the visibility problem for audio-only users specifically?
+                    Does it address the visibility problem for audio-only users specifically?
                   </p>
                 </div>
                 <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 flex items-center gap-4">
                   <img src={Assets.Diamondicon} className="w-4 h-4" />
                   <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
-                   Does it resolve the issue without adding new friction elsewhere in the experience?
+                    Does it resolve the issue without adding new friction elsewhere in the experience?
                   </p>
                 </div>
                 <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 flex items-center gap-4">
                   <img src={Assets.Diamondicon} className="w-4 h-4" />
                   <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
-                  Does it feel native to the meditation flow rather than interrupting it?
+                    Does it feel native to the meditation flow rather than interrupting it?
                   </p>
                 </div>
                 <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 flex items-center gap-4">
                   <img src={Assets.Diamondicon} className="w-4 h-4" />
                   <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
-                   Does it address both features or require separate solutions for each?
+                    Does it address both features or require separate solutions for each?
                   </p>
                 </div>
                 <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 flex items-center gap-4">
                   <img src={Assets.Diamondicon} className="w-4 h-4" />
                   <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
-                   Is it technically feasible within the current app architecture?
+                    Is it technically feasible within the current app architecture?
                   </p>
                 </div>
 
-                
+
 
 
 
               </div>
 
 
-               <div className="mt-12 mb-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {
-                    BeholdexplorationsImages.map(v => <ImageCard key={v.title} url={v.src} className="w-full" />)
-                  }
-                </div>
+              <div className="mt-12 mb-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                {
+                  BeholdexplorationsImages.map(v => <ImageCard key={v.title} url={v.src} className="w-full" />)
+                }
+              </div>
 
 
               <p className="font-medium text-[#3D3D4E] text-[18px] leading-6.75 mt-4 " >
-               The push notification addressed visibility but re-introduced friction by pulling users back into the app. Improving the share icon may have increased motivation to share for those who saw it but wouldn’t address visibility. The three chosen directions worked together. The timed pop-up and end-of-meditation callout solved visibility for audio-only users while the chips solved the effort barrier for reflection. Combining them into a single redesigned screen addressed all four of our HMW statements at once.
+                The push notification addressed visibility but re-introduced friction by pulling users back into the app. Improving the share icon may have increased motivation to share for those who saw it but wouldn’t address visibility. The three chosen directions worked together. The timed pop-up and end-of-meditation callout solved visibility for audio-only users while the chips solved the effort barrier for reflection. Combining them into a single redesigned screen addressed all four of our HMW statements at once.
               </p>
 
             </motion.div>
@@ -640,8 +578,8 @@ const Behold = () => {
 
 
 
-       
-         
+
+
           {/* ── DesignTesting ── */}
           <section id="DesignTesting">
             <motion.div {...fadeUp(0.1)}>
@@ -656,93 +594,80 @@ const Behold = () => {
 
 
 
-  <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-24">
-                  {
-                    DESIGNSCREENS.map(v => (
-                      <div>
-                    <ImageCard key={v.url} url={v.url} className="w-full border-3 border-[#FFC60B] rounded-lg " />
-                  
-                  
-                  </div>
+              <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-24">
+                {
+                  DESIGNSCREENS.map(v => (
+                    <div className="text-center">
+                      <ImageCard key={v.url} url={v.url} className="w-full border-3 border-[#FFC60B] rounded-lg " />
+                      {v.caption && <h2 className="text-[16px] md:text-[18px] text-[#3D3D4E] font-semibold my-2">
+                        {v.caption}
+                      </h2>}
+                      {v.description && <div className="font-medium text-[14px] md:text-[16px] leading-6.75 text-[#6A6A6A]">
+                        <p>{v.description}</p>
+                      </div>}
+
+                    </div>
                   ))
-                  }
+                }
+              </div>
+
+              <div className="text-center max-w-md mx-auto">
+
+                <h2 className="text-[16px] md:text-[18px] text-[#3D3D4E] font-semibold my-2">
+                  Option 3
+                </h2>
+                <div className="font-medium text-[14px] md:text-[16px] leading-6.75 text-[#6A6A6A]">
+                  <p>Separating reflecting and sharing into sequential screens to improve both without distractions.</p>
+                </div>
+
+              </div>
+
+
+
+              <div>
+
+                <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+                  The winning design
+                </h2>
+                <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+                  <p>6/8 participants preferred option 2 which opened with a call to share that activated the native device share sheet then sent a web preview link (via message or email) that recipients could open and listen to without downloading the app. I iterated on the design of the reflection section to allow users to use chips for quick responses and/or a  text field.</p>
+                  <p>I aligned with the PM to confirm the design resolved the problems then made some minor updates before handing off to development.</p>
                 </div>
 
 
 
-              {/* <div className="mt-12 space-y-8">
-                {DESIGNSCREENS.map((i) => (
-                  <ImageCard key={i.caption} caption={i.caption} url={i.url} />
-                ))}
+              </div>
 
 
-                <p className="text-[#6A6A6A] text-center text-[14px] md:text-[16px] font-medium max-w-md mx-auto ">
-                  Visual design alternatives tested for activity recognition, time to start tracking and visual appeal.
-                </p>
-              </div> */}
+              <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-24">
+                <ImageCard url={Assets.Beholddesignfive} className="w-full border-3 border-[#FFC60B] rounded-lg " />
+                <ImageCard url={Assets.Beholddesignsix} className="w-full border-3 border-[#FFC60B] rounded-lg " />
+              </div>
+
+              <div className="text-center max-w-md mx-auto font-medium text-[14px] md:text-[16px] leading-6.75 text-[#6A6A6A]">
+                <p>A call to action to share and reflect pops up at a point lined up with the voice narrators call out towards the end the meditation.</p>
+              </div>
 
 
-            
+              <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-24">
+                <ImageCard url={Assets.Beholddesignseven} className="w-full border-3 border-[#FFC60B] rounded-lg " />
+                <ImageCard url={Assets.Beholddesigneight} className="w-full border-3 border-[#FFC60B] rounded-lg " />
+              </div>
+
+
+              <div className="text-center max-w-md mx-auto font-medium text-[14px] md:text-[16px] leading-6.75 text-[#6A6A6A]">
+                <p>Recipients of shared meditations get a link which allows them to listen  without downloading the app.</p>
+              </div>
+
+
+
               <div className="my-12 grid grid-cols-1 ">
-              <ImageCard url={Assets.Beholddesignnine} className="w-full" />
+                <ImageCard url={Assets.Beholddesignnine} className="w-full" />
               </div>
 
             </motion.div>
           </section>
 
-
-          {/* ── Solution ── */}
-          {/* <section id="Solution">
-            <motion.div {...fadeUp(0.1)}>
-              <SectionLabel>Solution</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
-                Time Study Now - the core features
-              </h2>
-              <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
-                <p>I progressively iterated on the design based on making time tracking easy, quick and mistake proof. I factored in takeaways from user testing sessions such as: relying on icons and color to build muscle memory for quicker activity selection, making activity session summaries editable to allow mistakes to be corrected and providing admins with detailed summaries for analysis. The final design for the core features are shown below.</p>
-              </div>
-
-              <div className="mt-12 space-y-8">
-                {SolutionSCREENS.map((i) => (
-                  <GridImagesCard key={i.title} title={i.title} caption={i.caption} urls={i.urls} />
-                ))}
-              </div>
-
-            </motion.div>
-          </section> */}
-
-
-          {/* ── BuildHandover ── */}
-          {/* <section id="BuildHandover">
-            <motion.div {...fadeUp(0.1)}>
-              <SectionLabel>Build & Handover</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
-                Testing the build and closing the loop
-              </h2>
-              <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
-                <p>Once the beta was built, we tested it with both practitioners and administrators. Their feedback led to a round of improvements, both refinements to existing features and additions that weren't surfaced until the product was in real hands.</p>
-              </div>
-
-              <div className="mt-12 space-y-8">
-                {BuildHandover.map((i) => (
-                  <GridImagesCard key={i.title} title={i.title} caption={i.caption} urls={i.urls} />
-                ))}
-
-                <p className="my-6 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
-                  After incorporating build testing feedback we handed the project over to Time Study Inc's internal team. The handover covered everything they needed to continue developing and evaluating the product independently.
-                </p>
-
-                <ImageCard url={Assets.Timestudybuildhandoverseven} className="w-full " />
-                <p className="my-6 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
-                  The handover process itself involved knowledge transfer sessions with Time Study Inc's developers as well as design and documentation walkthroughs. Because their internal team had been involved throughout the project rather than receiving a finished product at the end, the transition was orientation rather than education.
-                </p>
-
-
-              </div>
-
-
-            </motion.div>
-          </section> */}
 
 
           {/* ── Impact ── */}
@@ -832,11 +757,8 @@ const Behold = () => {
 
               </div>
 
-
             </motion.div>
           </section>
-
-
 
 
           {/* ── Reflections ── */}
@@ -869,84 +791,3 @@ const Behold = () => {
 export default Behold;
 
 
-
-
-
-//  <div className="mt-12 space-y-8">
-
-//                 {/* first */}
-//                 <div className="mt-4 grid grid-cols-1">
-
-//                   <div className="bg-[#6D42FF08] border border-[#6D42FF] p-4 md:p-6 ">
-//                     <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] lg:mb-6">
-//                       Churn Rate
-//                     </p>
-//                     <p className="text-[14px] md:text-[24px] tracking-widest text-[#6D42FF] font-bold mb-3">0%</p>
-//                     <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
-//                       Practitioners who started using the app continued using it rather than falling back to contracted observers.
-//                     </p>
-//                   </div>
-
-//                 </div>
-//                 {/* second */}
-//                 <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
-
-//                   <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 ">
-//                     <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] lg:mb-6">
-//                       Participation Increase
-//                     </p>
-//                     <p className="text-[14px] md:text-[24px] tracking-widest text-[#6D42FF] font-bold mb-3">128%</p>
-//                     <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
-//                       From existing and new clients. This was more than double the 50% adoption target set at the start.
-//                     </p>
-//                   </div>
-
-//                   <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 ">
-//                     <p className="text-[16px] md:text-[18px] font-semibold leading-6 text-[#6A6A6A] lg:mb-6">
-//                       Mobile Driven Growth
-//                     </p>
-//                     <p className="text-[14px] md:text-[24px] tracking-widest text-[#6D42FF] font-bold mb-3">95%</p>
-//                     <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
-//                       Most of the new participation came from mobile app users, not contracted observers.
-//                     </p>
-//                   </div>
-
-//                 </div>
-
-//                 {/* third */}
-//                 <div className="mt-4 grid grid-cols-1">
-
-//                   <div className="bg-[#6D42FF08] border border-[#6D42FF] p-4 md:p-6 ">
-//                     <p className="text-[14px] md:text-[24px] tracking-widest text-[#6D42FF] font-bold mb-3">Real World Outcome</p>
-//                     <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
-//                       One healthcare organization identified that paediatric surgeons were consistently working overtime using Time Study Now data. They hired two additional surgeons to improve their surgeons wellbeing. This is the kind of operational decision that wasn't possible when data arrived on a clipboard.
-//                     </p>
-//                   </div>
-
-//                 </div>
-
-//                 {/* fourth */}
-//                 <div className="mt-4 flex gap-4 md:gap-8 flex-col md:flex-row ">
-
-//                   <div className="bg-[#6D42FF08] border border-[#6D42FF] p-4 md:p-6 self-start ">
-//                     <p className="text-[14px] md:text-[24px] tracking-widest text-[#6D42FF] font-bold">10M+ hours tracked</p>
-//                   </div>
-
-//                   <div className="bg-[#6D42FF08] border border-[#6D42FF] p-4 md:p-6 self-start">
-//                     <p className="text-[14px] md:text-[24px] tracking-widest text-[#6D42FF] font-bold ">$1M+ ARR for Time Study Inc</p>
-//                   </div>
-
-//                 </div>
-
-//                 {/* fifth */}
-//                 <div className="mt-4 flex gap-4 md:gap-8 flex-col md:flex-row ">
-//                   <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 self-start  ">
-//                     <p className="text-[14px] font-medium leading-6.75 text-[#6A6A6A]  ">
-//                       Mobile became a core differentiator for their sales
-//                     </p>
-//                   </div>
-
-//                 </div>
-
-
-//               </div>
