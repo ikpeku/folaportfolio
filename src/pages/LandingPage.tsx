@@ -32,14 +32,15 @@ const ProjectBlock: React.FC<{
   href?: string;
   children: React.ReactNode;
 }> = ({ title, dates, description, href, children }) => (
-  <motion.article className="relative mt-16 group cursor-pointer" {...scrollFadeUp}>
+  <motion.article className="relative mt-16 group cursor-pointer overflow-hidden" {...scrollFadeUp}>
     {href && <Link to={href} className="absolute inset-0 z-10" aria-label={title} />}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-5">
       <div>
          <div className="flex items-center gap-3">
       <h3 className="text-[24px] font-semibold">{title}</h3>
-      <div className="flex justify-center items-center border-2 text-[#191919] font-bold border-[#191919] rounded-full w-8 h-8 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-        →
+      <div className=" opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+       
+        <Assets.ArrowCircleRight />
       </div>
     </div>
 
@@ -51,7 +52,7 @@ const ProjectBlock: React.FC<{
       </p>
     </div>
     <div
-     className="transition-transform duration-500 group-hover:scale-[1.03]"
+     className="transition-transform duration-500 group-hover:scale-[1.03] overflow-hidden"
     >
     {children}
     </div>
@@ -65,19 +66,24 @@ const OtherProjectCard: React.FC<{
   src: string;
   href?: string;
 }> = ({ title, dates, description, src, href }) => (
-  <motion.div className="relative group cursor-pointer" {...scrollFadeUp}>
+  <motion.div
+    className="relative group cursor-pointer"
+    {...scrollFadeUp}
+    whileHover={{ rotate: 2, transition: { type: "spring", stiffness: 350, damping: 20 } }}
+    whileTap={{ rotate: 1, scale: 0.98, transition: { type: "spring", stiffness: 400, damping: 25 } }}
+  >
     {href && <Link to={href} className="absolute inset-0 z-10" aria-label={title} />}
     <div className="flex items-center gap-3">
       <h3 className="text-[24px] font-semibold">{title}</h3>
-      <div className="flex justify-center items-center border-2 text-[#191919] font-bold border-[#191919] rounded-full w-8 h-8 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-        →
+      <div className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+       <Assets.ArrowCircleRight />
       </div>
     </div>
 
     <div className="text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
     <p className="text-[20px] font-medium mt-3 leading-7.5 max-w-md">{description}</p>
 
-    <div className="mt-4 aspect-16/10 rounded-sm overflow-hidden">
+    <div className="mt-4 aspect-16/10 rounded-sm ">
       <img
         src={src}
         alt=""
@@ -143,7 +149,7 @@ const LandingPage: React.FC = () => (
         href="/zenith"
       />
     </div>
-       <Footer  />
+       <Footer reversed={true}  />
   </div>
 );
 

@@ -1,12 +1,13 @@
-import { ResumeIcon, EmailIcon, LinkedInIcon } from "./avatars";
-import Logo from "./logo.png";
-import HeroBanner from "./herobanner.png";
+import { ResumeIcon, EmailIcon, LinkedInIcon, Logo, ArrowCircleRight } from "./avatars";
+import HeroBanner from "./herobanner.svg";
+
 import Kiboschool from "./kiboschool.png";
 import Timestudy from "./timestudy.png";
 import Beholdshot from "./beholdshot.png";
 import Rukahshot from "./rukahshot.png";
 import Zenithshot from "./zenithshot.png";
-import Footerbannershot from "./footerbanner.png";
+import Footerbannershot from "./footerbanner.svg";
+// import Footerbannershot from "./footerbanner.png";
 import Avatar from "./avatar.png";
 import Iceshot from "./iceshot.png";
 import Aidesignone from "./aidesignone.png";
@@ -113,6 +114,7 @@ import Beholddesignnine from "./behold/beholddesignnine.gif"
 
 
 const Assets = {
+  ArrowCircleRight,
   Logo,
   HeroBanner,
   Kiboschool,

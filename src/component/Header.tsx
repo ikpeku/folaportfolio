@@ -13,10 +13,33 @@ const NAV: NavItem[] = [
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   `hover:text-[#191919] transition-colors text-[16px] ${
-    isActive
-      ? "text-[#191919] underline decoration-2 underline-offset-[8px] font-bold"
-      : "text-[#3D3D4E] font-semibold hover:underline decoration-1 underline-offset-[8px]"
+    isActive ? "text-[#191919] font-bold" : "text-[#3D3D4E] font-semibold"
   }`;
+
+const ease = [0.4, 0, 0.2, 1] as const;
+
+const logoVariants = {
+  rest:   { scale: 1,    transition: { duration: 0.35, ease } },
+  hover:  { scale: 1.04, transition: { duration: 0.35, ease } },
+  // active: { scale: 1.04, transition: { duration: 0.35, ease } },
+};
+
+const logoUnderlineVariants = {
+  rest:   { bottom: 2,  transition: { duration: 0.35, ease } },
+  hover:  { bottom: -8, transition: { duration: 0.35, ease } },
+  active: { bottom: -8, transition: { duration: 0.35, ease } },
+};
+
+const NavLabel = ({ isActive, label }: { isActive: boolean; label: string }) => (
+  <motion.span
+    className={isActive ? "underline decoration-2" : "hover:underline decoration-1"}
+    style={{ textUnderlineOffset: "8px" }}
+    // whileHover={{ textUnderlineOffset: "16px" }}
+    transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+  >
+    {label}
+  </motion.span>
+);
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -29,13 +52,22 @@ const Header = () => {
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
         <NavLink to="/" onClick={() => setOpen(false)}>
-          <motion.img
-            src={Assets.Logo}
-            alt="Folarin Lawal"
-            className="h-8 w-auto"
-            whileHover={{ scale: 1.08 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          />
+          {() => (
+            <motion.div
+              className="relative inline-block"
+              variants={logoVariants}
+              initial="rest"
+              whileHover="hover"
+              animate={"rest"}
+            >
+              <Assets.Logo className="h-9 w-auto" />
+              <motion.span
+                className="absolute left-0 h-0.5 bg-[#191919]"
+                style={{ width: "90%" }}
+                variants={logoUnderlineVariants}
+              />
+            </motion.div>
+          )}
         </NavLink>
       </motion.div>
 
@@ -48,7 +80,7 @@ const Header = () => {
       >
         {NAV.map((n) => (
           <NavLink key={n.label} to={n.to} className={navLinkClass}>
-            {n.label}
+            {({ isActive }) => <NavLabel isActive={isActive} label={n.label} />}
           </NavLink>
         ))}
       </motion.nav>
@@ -98,7 +130,7 @@ const Header = () => {
                   className={navLinkClass}
                   onClick={() => setOpen(false)}
                 >
-                  {n.label}
+                  {({ isActive }) => <NavLabel isActive={isActive} label={n.label} />}
                 </NavLink>
               </motion.div>
             ))}
