@@ -1,6 +1,94 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Avenir Next", sans-serif;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir - Next/AvenirNext-Regular-08.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir - Next/AvenirNext-Italic-05.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir - Next/AvenirNext-UltraLight-11.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir - Next/AvenirNext-UltraLightItalic-12.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir - Next/AvenirNext-Medium-06.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir - Next/AvenirNext-MediumItalic-07.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir - Next/AvenirNext-DemiBold-03.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir - Next/AvenirNext-DemiBoldItalic-04.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir - Next/AvenirNext-Bold-01.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir - Next/AvenirNext-BoldItalic-02.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir - Next/AvenirNext-Heavy-09.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir - Next/AvenirNext-HeavyItalic-10.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
 body {
-  font-family: "Avenir Next", Avenir, sans-serif !important;
+  font-family: "Avenir Next", sans-serif !important;
   color: #191919;
 }
