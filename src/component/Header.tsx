@@ -24,11 +24,11 @@ const logoVariants = {
   // active: { scale: 1.04, transition: { duration: 0.35, ease } },
 };
 
-const logoUnderlineVariants = {
-  rest:   { bottom: 2,  transition: { duration: 0.35, ease } },
-  hover:  { bottom: -8, transition: { duration: 0.35, ease } },
-  active: { bottom: -8, transition: { duration: 0.35, ease } },
-};
+// const logoUnderlineVariants = {
+//   rest:   { bottom: 2,  transition: { duration: 0.35, ease } },
+//   hover:  { bottom: -8, transition: { duration: 0.35, ease } },
+//   active: { bottom: -8, transition: { duration: 0.35, ease } },
+// };
 
 const NavLabel = ({ isActive, label }: { isActive: boolean; label: string }) => (
   <motion.span
@@ -46,11 +46,7 @@ const Header = () => {
 
   return (
     <header className="flex items-center justify-between pt-8 pb-6">
-      <motion.div
-        initial={{ opacity: 0, x: -16 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
-      >
+
         <NavLink to="/" onClick={() => setOpen(false)}>
           {() => (
             <motion.div
@@ -60,16 +56,11 @@ const Header = () => {
               whileHover="hover"
               animate={"rest"}
             >
-              <Assets.Logo className="h-9 w-auto" />
-              <motion.span
-                className="absolute left-0 h-0.5 bg-[#191919]"
-                style={{ width: "90%" }}
-                variants={logoUnderlineVariants}
-              />
+              <Assets.Logo className="" />
             </motion.div>
           )}
         </NavLink>
-      </motion.div>
+     
 
       {/* Desktop nav */}
       <motion.nav
