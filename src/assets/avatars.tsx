@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const ResumeIcon = () => (
   <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@ export const ArrowCircleRight = () => (
 // </svg> */}
 const logoTransition = { duration: 0.25, ease: [0.4, 0, 0.2, 1] as const };
 
-export const Logo = ({ className }: { className?: string }) => {
+export const Logo = () => {
   const [hovered, setHovered] = useState(false);
 
   return (
