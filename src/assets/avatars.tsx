@@ -53,7 +53,7 @@ export const Logo = () => {
     >
       <motion.div
         style={{ position: "absolute", top: 0, left: 0 }}
-        animate={{ opacity: hovered ? 0 : 1 }}
+        animate={{ opacity: hovered ? 1 : 0 }}
         transition={logoTransition}
       >
         <svg width="173" height="31" viewBox="0 0 173 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@ export const Logo = () => {
 
       <motion.div
         style={{ position: "absolute", top: 0, left: 0 }}
-        animate={{ opacity: hovered ? 1 : 0 }}
+        animate={{ opacity: hovered ? 0 : 1 }}
         transition={logoTransition}
       >
         <svg width="189" height="35" viewBox="0 0 189 35" fill="none" xmlns="http://www.w3.org/2000/svg">

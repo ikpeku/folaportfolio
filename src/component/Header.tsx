@@ -56,7 +56,7 @@ const Header = () => {
               whileHover="hover"
               animate={"rest"}
             >
-              <Assets.Logo className="" />
+              <Assets.Logo />
             </motion.div>
           )}
         </NavLink>

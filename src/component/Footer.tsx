@@ -13,10 +13,6 @@ const logoVariants = {
   hover: { scale: 1.04, transition: { duration: 0.35, ease } },
 };
 
-const logoUnderlineVariants = {
-  rest: { bottom: 2, transition: { duration: 0.35, ease } },
-  hover: { bottom: -8, transition: { duration: 0.35, ease } },
-};
 
 const AnimatedLogo = ({ className }: { className?: string }) => (
   <motion.div
@@ -24,13 +20,9 @@ const AnimatedLogo = ({ className }: { className?: string }) => (
     variants={logoVariants}
     initial="rest"
     whileHover="hover"
+    animate="rest"
   >
-    <Assets.Logo className="h-8 w-auto" />
-    <motion.span
-      className="absolute left-0 h-0.5 bg-[#191919]"
-      style={{ width: "100%" }}
-      variants={logoUnderlineVariants}
-    />
+    <Assets.Logo />
   </motion.div>
 );
 
