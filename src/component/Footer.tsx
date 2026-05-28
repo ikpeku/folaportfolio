@@ -31,11 +31,13 @@ const Footer = ({
   isDetail = false,
   onClick,
   description,
+   avatartype="non-space" 
 }: {
   description?: string;
   reversed?: boolean;
   isDetail?: boolean;
   onClick?: () => void;
+  avatartype?: "space" | "non-space"
 }) => (
   <footer
     className={cn(
@@ -65,10 +67,11 @@ const Footer = ({
 
     <div className={cn("flex my-4 lg:my-0 lg:justify-center", reversed ? "justify-end" : "justify-start")}>
       <img
-        src={Assets.Footerbannershot}
+        src={avatartype ==  "space" ? Assets.Footerbannershot : Assets.HeroBanner}
         alt="Footer banner"
-        className={cn("w-1/3 lg:w-full max-h-112.75 max-w-sm md:max-w-full rounded-xl object-contain", reversed && "scale-x-[-1]")}
+        className={cn("w-1/3 lg:w-full max-h-112.75 max-w-sm md:max-w-full rounded-xl object-contain", )}
       />
+      {/* reversed && "scale-x-[-1]" */}
     </div>
 
     {!isDetail && (

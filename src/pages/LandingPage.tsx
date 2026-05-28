@@ -149,7 +149,7 @@ const LandingPage: React.FC = () => (
         href="/zenith"
       />
     </div>
-       <Footer reversed={false}  />
+       <Footer reversed={false} avatartype="space" />
   </div>
 );
 

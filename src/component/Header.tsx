@@ -33,7 +33,7 @@ const logoVariants = {
 const NavLabel = ({ isActive, label }: { isActive: boolean; label: string }) => (
   <motion.span
     className={isActive ? "underline decoration-2" : "hover:underline decoration-1"}
-    style={{ textUnderlineOffset: "8px" }}
+    style={{ textUnderlineOffset: isActive ? "8px" : "6px"}}
     // whileHover={{ textUnderlineOffset: "16px" }}
     transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
   >

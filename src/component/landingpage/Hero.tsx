@@ -26,11 +26,11 @@ const Hero = () => (
       </motion.div>
     </div>
 
-    <motion.div className="md:ml-auto md:w-101.25 md:h-113 " {...fadeUp(0.2)}>
+    <motion.div className="md:ml-auto  md:self-end md:flex md:items-end " {...fadeUp(0.2)}>
       <img
         src={Assets.HeroBanner}
         alt="Hero banner"
-        className="w-1/2 md:w-101.25 md:h-113 "
+        // className="w-1/2 md:w-101.25 md:h-113 "
       />
     </motion.div>
   </section>

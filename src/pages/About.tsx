@@ -73,7 +73,7 @@ const About = () => (
       </motion.div>
 
       <motion.div className="flex justify-center md:justify-end" {...fadeUp(0.2)}>
-        <div className="w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden bg-neutral-200 shrink-0">
+        <div className="w-52 h-52 md:w-73.5 md:h-73.5 rounded-full overflow-hidden bg-neutral-200 shrink-0">
           <img
             src={Assets.Avatar}
             alt="Folarin Lawal"
@@ -131,7 +131,7 @@ const About = () => (
     </div>
 
 
-       <Footer reversed={true} />
+       <Footer reversed={true} avatartype="non-space" />
 
   </div>
 );
