@@ -8,7 +8,7 @@ type NavItem = { label: string; to: string };
 const NAV: NavItem[] = [
   { label: "Home", to: "/" },
   { label: "About Me", to: "/about" },
-  { label: "Design x A.I", to: "/design-ai" },
+  // { label: "Design x A.I", to: "/design-ai" },
 ];
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>

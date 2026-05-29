@@ -2,10 +2,25 @@ import { ResumeIcon, EmailIcon, LinkedInIcon, Logo, ArrowCircleRight } from "./a
 import HeroBanner from "./herobanner.svg";
 
 import Kiboschool from "./kiboschool.png";
+import Kiboschool2x from "./Kiboschool@2x.png";
+import Kiboschool3x from "./Kiboschool@3x.png";
+import Kiboschool4x from "./Kiboschool@4x.png";
 import Timestudy from "./timestudy.png";
+import Timestudy2x from "./timestudy@2x.png";
+import Timestudy3x from "./timestudy@3x.png";
+import Timestudy4x from "./timestudy@4x.png";
 import Beholdshot from "./beholdshot.png";
+import Beholdshot2x from "./beholdshot@2x.png";
+import Beholdshot3x from "./beholdshot@3x.png";
+import Beholdshot4x from "./beholdshot@4x.png";
 import Rukahshot from "./rukahshot.png";
+import Rukahshot2x from "./rukahshot@2x.png";
+import Rukahshot3x from "./rukahshot@3x.png";
+import Rukahshot4x from "./rukahshot@4x.png";
 import Zenithshot from "./zenithshot.png";
+import Zenithshot2x from "./zenithshot@2x.png";
+import Zenithshot3x from "./zenithshot@3x.png";
+import Zenithshot4x from "./zenithshot@4x.png";
 import Footerbannershot from "./footerbanner.svg";
 // import Footerbannershot from "./footerbanner.png";
 import Avatar from "./avatar.png";
@@ -113,15 +128,41 @@ import Beholddesignnine from "./behold/beholddesignnine.gif"
 
 
 
+const KiboschoolSrcSet = `${Kiboschool} 1x, ${Kiboschool2x} 2x, ${Kiboschool3x} 3x, ${Kiboschool4x} 4x`;
+const TimestudySrcSet = `${Timestudy} 1x, ${Timestudy2x} 2x, ${Timestudy3x} 3x, ${Timestudy4x} 4x`;
+const BeholdshotSrcSet = `${Beholdshot} 1x, ${Beholdshot2x} 2x, ${Beholdshot3x} 3x, ${Beholdshot4x} 4x`;
+const RukahshotSrcSet = `${Rukahshot} 1x, ${Rukahshot2x} 2x, ${Rukahshot3x} 3x, ${Rukahshot4x} 4x`;
+const ZenithshotSrcSet = `${Zenithshot} 1x, ${Zenithshot2x} 2x, ${Zenithshot3x} 3x, ${Zenithshot4x} 4x`;
+
 const Assets = {
   ArrowCircleRight,
   Logo,
   HeroBanner,
   Kiboschool,
+  Kiboschool2x,
+  Kiboschool3x,
+  Kiboschool4x,
+  KiboschoolSrcSet,
   Timestudy,
+  Timestudy2x,
+  Timestudy3x,
+  Timestudy4x,
+  TimestudySrcSet,
   Beholdshot,
+  Beholdshot2x,
+  Beholdshot3x,
+  Beholdshot4x,
+  BeholdshotSrcSet,
   Rukahshot,
+  Rukahshot2x,
+  Rukahshot3x,
+  Rukahshot4x,
+  RukahshotSrcSet,
   Zenithshot,
+  Zenithshot2x,
+  Zenithshot3x,
+  Zenithshot4x,
+  ZenithshotSrcSet,
   Footerbannershot,
   Avatar,
   Iceshot,

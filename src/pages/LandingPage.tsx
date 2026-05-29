@@ -51,10 +51,10 @@ const ProjectBlock: React.FC<{
         {description}
       </p>
     </div>
-    <div
-     className="transition-transform duration-500 group-hover:scale-[1.03] overflow-hidden"
-    >
-    {children}
+    <div className="rounded-xl overflow-hidden">
+      <div className="transition-transform duration-500 group-hover:scale-[1.03]">
+        {children}
+      </div>
     </div>
   </motion.article>
 );
@@ -64,8 +64,9 @@ const OtherProjectCard: React.FC<{
   dates: string;
   description: string;
   src: string;
+  srcSet?: string;
   href?: string;
-}> = ({ title, dates, description, src, href }) => (
+}> = ({ title, dates, description, src, srcSet, href }) => (
   <motion.div
     className="relative group cursor-pointer"
     {...scrollFadeUp}
@@ -86,6 +87,7 @@ const OtherProjectCard: React.FC<{
     <div className="mt-4 aspect-16/10 rounded-sm ">
       <img
         src={src}
+        srcSet={srcSet}
         alt=""
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03] group-hover:-skew-y-1"
       />
@@ -109,7 +111,7 @@ const LandingPage: React.FC = () => (
       description="Designing a learning platform to support a fully remote BSc. Computer Science Degree."
       href="/kibo-school"
     >
-      <img src={Assets.Kiboschool} alt="" className="w-full h-full max-h-155 object-cover" />
+      <img src={Assets.Kiboschool} srcSet={Assets.KiboschoolSrcSet} alt="" className="w-full h-full max-h-155 object-cover" />
     </ProjectBlock>
 
     <ProjectBlock
@@ -118,7 +120,7 @@ const LandingPage: React.FC = () => (
       description="Helping healthcare practitioners track their time so they can be appropriately reimbursed by the government."
       href="/time-study"
     >
-      <img src={Assets.Timestudy} alt="" className="w-full h-full max-h-155 object-cover" />
+      <img src={Assets.Timestudy} srcSet={Assets.TimestudySrcSet} alt="" className="w-full h-full max-h-155 object-cover" />
     </ProjectBlock>
 
     <ProjectBlock
@@ -127,7 +129,7 @@ const LandingPage: React.FC = () => (
       description="Helping Christians maintain consistent prayer practice through daily guided prayers & meditations."
       href="/behold"
     >
-      <img src={Assets.Beholdshot} alt="" className="w-full h-full max-h-155 object-cover" />
+      <img src={Assets.Beholdshot} srcSet={Assets.BeholdshotSrcSet} alt="" className="w-full h-full max-h-155 object-cover" />
     </ProjectBlock>
 
     
@@ -139,6 +141,7 @@ const LandingPage: React.FC = () => (
         dates="Jan 2023 - Aug 2024"
         description="Building a wedding vendor discovery and review platform from the ground up."
         src={Assets.Rukahshot}
+        srcSet={Assets.RukahshotSrcSet}
         href="/rukah"
       />
       <OtherProjectCard
@@ -146,6 +149,7 @@ const LandingPage: React.FC = () => (
         dates="Jun 2025 - Jul 2025"
         description="Experimental design for an AI professional development platform to help educators grow."
         src={Assets.Zenithshot}
+        srcSet={Assets.ZenithshotSrcSet}
         href="/zenith"
       />
     </div>

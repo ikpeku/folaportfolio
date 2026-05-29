@@ -10,8 +10,8 @@ const fadeUp = (delay = 0) => ({
 });
 
 const Hero = () => (
-  <section id="home" className="flex  flex-col-reverse md:flex-row md:items-start gap-10 pt-14 md:pt-50.75 pb-px [border-bottom:none] bg-[repeating-linear-gradient(90deg,#B1B1B8_0,#B1B1B8_4px,transparent_4px,transparent_8px)] bg-size-[100%_1px] bg-bottom bg-no-repeat ">
-    <div className="mt-2 mb-10 md:my-10  ">
+  <section id="home" className="flex  flex-col-reverse md:flex-row md:items-start gap-10 pt-14 md:pt-38.75 pb-px [border-bottom:none] bg-[repeating-linear-gradient(90deg,#B1B1B8_0,#B1B1B8_4px,transparent_4px,transparent_8px)] bg-size-[100%_1px] bg-bottom bg-no-repeat ">
+    <div className="mt-2 mb-10 md:my-10  max-w-1/2">
       <motion.p
         className="font-medium text-[24px] leading-9 "
         {...fadeUp(0.15)}
@@ -26,7 +26,7 @@ const Hero = () => (
       </motion.div>
     </div>
 
-    <motion.div className="md:ml-auto  md:self-end md:flex md:items-end " {...fadeUp(0.2)}>
+    <motion.div className="max-w-1/2 md:ml-auto  md:self-end md:flex md:items-end " {...fadeUp(0.2)}>
       <img
         src={Assets.HeroBanner}
         alt="Hero banner"

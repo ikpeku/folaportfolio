@@ -26,7 +26,7 @@ const AppContent = () => {
   const location = useLocation();
   return (
     <main className="min-h-screen font-sans antialiased relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-0">
         <Header />
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
