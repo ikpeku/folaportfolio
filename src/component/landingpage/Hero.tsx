@@ -11,9 +11,9 @@ const fadeUp = (delay = 0) => ({
 
 const Hero = () => (
   <section id="home" className="flex  flex-col-reverse md:flex-row md:items-start gap-10 pt-14 md:pt-38.75 pb-px [border-bottom:none] bg-[repeating-linear-gradient(90deg,#B1B1B8_0,#B1B1B8_4px,transparent_4px,transparent_8px)] bg-size-[100%_1px] bg-bottom bg-no-repeat ">
-    <div className="mt-2 mb-10 md:my-10  max-w-1/2">
+    <div className="mt-2 mb-10 md:my-10 md:max-w-1/2">
       <motion.p
-        className="font-medium text-[24px] leading-9 "
+        className="font-medium text-[20px] md:text-[24px] leading-9 "
         {...fadeUp(0.15)}
       >
         I'm a generalist product designer focused on creating simple, intuitive and visually appealing user experiences.

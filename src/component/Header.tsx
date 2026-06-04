@@ -19,8 +19,8 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 const ease = [0.4, 0, 0.2, 1] as const;
 
 const logoVariants = {
-  rest:   { scale: 1,    transition: { duration: 0.35, ease } },
-  hover:  { scale: 1.04, transition: { duration: 0.35, ease } },
+  rest:   { scale: 1,    transition: { duration: 0.25, ease } },
+  hover:  { scale: 1.04, transition: { duration: 0.25, ease } },
   // active: { scale: 1.04, transition: { duration: 0.35, ease } },
 };
 
@@ -45,7 +45,8 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between pt-8 pb-6">
+    <header>
+    <nav className="flex items-center justify-between pt-8 pb-6">
 
         <NavLink to="/" onClick={() => setOpen(false)}>
           {() => (
@@ -83,27 +84,30 @@ const Header = () => {
         aria-label="Toggle menu"
       >
         <motion.span
-          className="block h-[1.5px] w-5 bg-[#191919] origin-center"
-          animate={open ? { rotate: 45, y: 6.5 } : { rotate: 0, y: 0 }}
+          className="block h-[2.68px] w-5 bg-[#000000] origin-center"
+          animate={open ? { rotate: 45, y: 7.68 } : { rotate: 0, y: 0 }}
           transition={{ duration: 0.25 }}
         />
         <motion.span
-          className="block h-[1.5px] w-5 bg-[#191919]"
+          className="block h-[2.68px] w-5 bg-[#000000]"
           animate={open ? { opacity: 0 } : { opacity: 1 }}
           transition={{ duration: 0.2 }}
         />
         <motion.span
-          className="block h-[1.5px] w-5 bg-[#191919] origin-center"
-          animate={open ? { rotate: -45, y: -6.5 } : { rotate: 0, y: 0 }}
+          className="block h-[2.68px] w-5 bg-[#000000] origin-center"
+          animate={open ? { rotate: -45, y: -7.68 } : { rotate: 0, y: 0 }}
           transition={{ duration: 0.25 }}
         />
       </button>
 
-      {/* Mobile drawer */}
+      
+    </nav>
+
+    {/* Mobile drawer */}
       <AnimatePresence>
         {open && (
           <motion.nav
-            className="md:hidden fixed top-18 left-0 right-0 z-50 bg-white border-b border-neutral-100 px-6 pb-6 flex flex-col gap-5 text-[15px]"
+            className="md:hidden -mx-4 sm:mx-0 bg-white border-b border-neutral-100 px-10 sm:px-6 pb-6 flex flex-col gap-5 text-[15px] text-center"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -128,6 +132,7 @@ const Header = () => {
           </motion.nav>
         )}
       </AnimatePresence>
+
     </header>
   );
 };

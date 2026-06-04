@@ -20,7 +20,7 @@ const scrollFadeUp = {
 // ——————————————————— Section components ———————————————————
 
 const SelectedProjectsHeader = ({ icon, title }: { icon: React.ReactNode; title: string }) => (
-  <motion.h2 className="text-[20px] font-semibold mt-16" {...scrollFadeUp}>
+  <motion.h2 className="text-[18px] md:text-[20px] font-semibold my-8 sm:mt-32 sm:mb-24 " {...scrollFadeUp}>
     {title} <PaperPlaneEmoji icon={icon} />
   </motion.h2>
 );
@@ -32,9 +32,9 @@ const ProjectBlock: React.FC<{
   href?: string;
   children: React.ReactNode;
 }> = ({ title, dates, description, href, children }) => (
-  <motion.article className="relative mt-16 group cursor-pointer overflow-hidden" {...scrollFadeUp}>
-    {href && <Link to={href} className="absolute inset-0 z-10" aria-label={title} />}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-5">
+  <motion.article className="relative my-8 sm:mt-26 sm:mb-16 group cursor-pointer overflow-hidden" {...scrollFadeUp}>
+    {href && <Link to={href} className="text-[20px] md:text-[24px] font-semibold text-[#191919]   absolute inset-0 z-10" aria-label={title} />}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
       <div>
          <div className="flex items-center gap-3">
       <h3 className="text-[24px] font-semibold">{title}</h3>
@@ -45,14 +45,14 @@ const ProjectBlock: React.FC<{
     </div>
 
 
-        <div className="text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
+        <div className="text-[14px] md:text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
       </div>
-      <p className="text-[20px] font-medium text-[#191919] max-w-md md:justify-self-end leading-7.5">
+      <p className="text-[16px] md:text-[20px] font-medium text-[#191919]  md:justify-self-end leading-7.5">
         {description}
       </p>
     </div>
     <div className="rounded-xl overflow-hidden">
-      <div className="transition-transform duration-500 group-hover:scale-[1.03]">
+      <div className="transition-transform duration-100 group-hover:scale-[1.03]">
         {children}
       </div>
     </div>
@@ -73,7 +73,7 @@ const OtherProjectCard: React.FC<{
     whileHover={{ rotate: 2, transition: { type: "spring", stiffness: 350, damping: 20 } }}
     whileTap={{ rotate: 1, scale: 0.98, transition: { type: "spring", stiffness: 400, damping: 25 } }}
   >
-    {href && <Link to={href} className="absolute inset-0 z-10" aria-label={title} />}
+    {href && <Link to={href} className="text-[20px] md:text-[24px] font-semibold text-[#191919] absolute inset-0 z-10" aria-label={title} />}
     <div className="flex items-center gap-3">
       <h3 className="text-[24px] font-semibold">{title}</h3>
       <div className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
@@ -81,17 +81,17 @@ const OtherProjectCard: React.FC<{
       </div>
     </div>
 
-    <div className="text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
-    <p className="text-[20px] font-medium mt-3 leading-7.5 max-w-md">{description}</p>
+    <div className="text-[14px] md:text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
+    <p className="text-[16px] md:text-[20px] font-medium mt-3 leading-7.5 max-w-md">{description}</p>
 
-    <div className="mt-4 aspect-16/10 rounded-sm ">
-      <img
-        src={src}
-        srcSet={srcSet}
-        alt=""
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03] group-hover:-skew-y-1"
-      />
-    </div>
+<div className="mt-4 rounded-xl overflow-hidden aspect-16/10">
+  <img
+    src={src}
+    srcSet={srcSet}
+    alt=""
+    className="w-full h-full object-cover transition-transform duration-100 group-hover:scale-[1.03] group-hover:-skew-y-1"
+  />
+</div>
   </motion.div>
 );
 
@@ -100,10 +100,10 @@ const OtherProjectCard: React.FC<{
 // ——————————————————— Page ———————————————————
 
 const LandingPage: React.FC = () => (
-  <div className="w-full">
+  <div className="w-full ">
     <Hero />
 
-    <SelectedProjectsHeader title={"Selected Projects"} icon={"🚀"} />
+    <SelectedProjectsHeader title={"Selected Projects"} icon={"🚀"}  />
 
     <ProjectBlock
       title="Kibo School"

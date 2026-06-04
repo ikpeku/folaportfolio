@@ -41,7 +41,9 @@ const Footer = ({
 }) => (
   <footer
     className={cn(
-      "mt-24 pt-12 border-t border-dashed border-[#B1B1B8] flex flex-col lg:flex-row lg:items-end",
+      `mt-8 pt-8 md:mt-32 md:pt-32  flex flex-col lg:flex-row lg:items-end
+      [border-top:none] bg-[repeating-linear-gradient(90deg,#B1B1B8_0,#B1B1B8_4px,transparent_4px,transparent_8px)] bg-size-[100%_1px] bg-top bg-no-repeat 
+      `,
       reversed && "lg:flex-row-reverse",
     )}
   >
@@ -77,12 +79,13 @@ const Footer = ({
     {!isDetail && (
       <div
         className={cn(
-          "my-10 flex flex-wrap items-center gap-4 flex-1 ",
+          "my-4 md:my-10 flex flex-wrap items-center gap-2 md:gap-4 flex-1 ",
           !reversed
-            ? "justify-center lg:justify-end"
-            : "justify-center lg:justify-start",
+            ? " lg:justify-end"
+            : "lg:justify-start",
         )}
       >
+        {reversed && <AnimatedLogo className="hidden lg:block mr-12" />}
         <LinkChip
           icon={<Assets.ResumeIcon />}
           label="Resume"
@@ -98,12 +101,17 @@ const Footer = ({
           label="Email"
           href="mailto:lawal.folarin@gmail.com"
         />
-        <AnimatedLogo className="hidden lg:block" />
+       {!reversed && <AnimatedLogo className="hidden lg:block ml-12" />}
       </div>
     )}
 
     <div>
-      <AnimatedLogo className="mb-8 lg:hidden" />
+
+      <div className={cn("flex", !reversed
+            ? "justify-end"
+            : "justify-start",)}>
+      <AnimatedLogo className={cn(" mb-8 lg:hidden",)} />
+      </div>
     </div>
   </footer>
 );

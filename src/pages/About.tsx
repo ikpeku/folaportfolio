@@ -85,7 +85,7 @@ const About = () => (
 
     {/* ── Divider ── */}
     <motion.div
-      className="my-16 border-t border-dashed border-neutral-300"
+      className="my-16  pb-px [border-bottom:none] bg-[repeating-linear-gradient(90deg,#B1B1B8_0,#B1B1B8_4px,transparent_4px,transparent_8px)] bg-size-[100%_1px] bg-bottom bg-no-repeat "
       {...fadeUp(0.1)}
     />
 
@@ -97,7 +97,10 @@ const About = () => (
       Design Process ⚙️
     </motion.h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    <div className="max-w-4xl mx-auto">
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
       {processCards.map((card, i) => (
         <motion.div
           key={card.title}
@@ -116,7 +119,7 @@ const About = () => (
         <img
           src={Assets.Iceshot}
           alt="Iceberg illustration"
-          className="w-full max-w-sm object-cover rounded-sm sm:ml-62 z-50"
+          className="w-full max-w-sm object-cover rounded-sm sm:ml-28 z-50"
         />
       </motion.div>
 
@@ -129,6 +132,9 @@ const About = () => (
         ))}
       </motion.div>
     </div>
+
+    </div>
+
 
 
        <Footer reversed={true} avatartype="non-space" />
