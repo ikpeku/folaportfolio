@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Assets from "../assets";
+import { ExitIcon, Hamburger } from "../assets/avatars";
 
 type NavItem = { label: string; to: string };
 
@@ -74,35 +75,20 @@ const Header = () => {
 
       {/* Mobile hamburger */}
       <button
-        className="md:hidden flex flex-col gap-1.25 p-2 -mr-2"
+      className="md:hidden"
         onClick={() => setOpen((v) => !v)}
         aria-label="Toggle menu"
       >
-        <motion.span
-          className="block h-[2.68px] w-5 bg-[#000000] origin-center"
-          animate={open ? { rotate: 45, y: 7.68 } : { rotate: 0, y: 0 }}
-          transition={{ duration: 0.25 }}
-        />
-        <motion.span
-          className="block h-[2.68px] w-5 bg-[#000000]"
-          animate={open ? { opacity: 0 } : { opacity: 1 }}
-          transition={{ duration: 0.2 }}
-        />
-        <motion.span
-          className="block h-[2.68px] w-5 bg-[#000000] origin-center"
-          animate={open ? { rotate: -45, y: -7.68 } : { rotate: 0, y: 0 }}
-          transition={{ duration: 0.25 }}
-        />
+        {!open  && <Hamburger />}
+        {open  && <ExitIcon />}
       </button>
-
-      
     </nav>
 
     {/* Mobile drawer */}
       <AnimatePresence>
         {open && (
           <motion.nav
-            className="md:hidden -mx-4 sm:mx-0 bg-white border-b border-neutral-100 px-10 sm:px-6 pb-6 flex flex-col gap-5 text-[15px] text-center"
+            className="md:hidden -mx-4 sm:mx-0 px-10 sm:px-6 pb-6 flex flex-col gap-5 text-[15px] text-center"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

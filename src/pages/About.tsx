@@ -57,7 +57,7 @@ const About = () => (
 
     {/* ── Bio ── */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-      <motion.div className="space-y-5 font-medium text-[20px] leading-7.5" {...fadeUp(0.1)}>
+      <motion.div className="space-y-5 font-medium text-[16px] md:text-[20px] leading-6 tracking-[0%] md:tracking-normal md:leading-7.5" {...fadeUp(0.1)}>
         <p>
           Hi, I'm Folarin 👋. I've been designing digital products for 9 years. I approach problems from first principles to have the best chance at implementing effective solutions.
         </p>
@@ -73,7 +73,7 @@ const About = () => (
       </motion.div>
 
       <motion.div className="flex justify-center md:justify-end" {...fadeUp(0.2)}>
-        <div className="w-52 h-52 md:w-73.5 md:h-73.5 rounded-full overflow-hidden bg-neutral-200 shrink-0">
+        <div className="w-62 h-62 md:w-73.5 md:h-73.5 rounded-full overflow-hidden bg-neutral-200 shrink-0">
           <img
             src={Assets.Avatar}
             alt="Folarin Lawal"
@@ -113,8 +113,8 @@ const About = () => (
       ))}
     </div>
 
-    {/* ── Iceberg ── */}
-    <div className="mt-20 grid grid-cols-1 md:grid-cols-2 items-center">
+    {/* ── Iceberg desktop ── */}
+    <div className="hidden mt-20 md:grid grid-cols-1 md:grid-cols-2 items-center">
       <motion.div className="flex justify-items-end " {...fadeUp(0.1)}>
         <img
           src={Assets.Iceshot}
@@ -132,6 +132,36 @@ const About = () => (
         ))}
       </motion.div>
     </div>
+
+    {/* ── Iceberg mobile ── */}
+    <div className=" mt-20 grid grid-cols-1 items-center md:hidden ">
+      
+
+      <motion.div className="space-y-6" {...fadeUp(0.2)}>
+        {icebergLayers.map((layer, i) => {
+          
+
+          return (
+            <>
+            <motion.div className="max-w-4/5 ml-auto" key={layer.title} {...fadeUp(0.1 + i * 0.06)}>
+            <p className="text-[14px] font-bold">{layer.title}</p>
+            <p className="text-[12px] font-medium leading-relaxed text-[#6A6A6A] mt-1">{layer.body}</p>
+          </motion.div>
+
+           {layer.title == "Surface" && <motion.div className="flex justify-items-end max-w-4/5 mr-auto " {...fadeUp(0.1)}>
+        <img
+          src={Assets.Iceshot}
+          alt="Iceberg illustration"
+          className="w-full max-w-sm object-cover rounded-sm sm:ml-28 z-50"
+        />
+      </motion.div>}
+            
+            </>
+          )
+        })}
+      </motion.div>
+    </div>
+
 
     </div>
 

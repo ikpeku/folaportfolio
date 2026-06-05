@@ -32,7 +32,7 @@ const ProjectBlock: React.FC<{
   href?: string;
   children: React.ReactNode;
 }> = ({ title, dates, description, href, children }) => (
-  <motion.article className="relative my-8 sm:mt-26 sm:mb-16 group cursor-pointer overflow-hidden" {...scrollFadeUp}>
+  <motion.article className="relative my-16 sm:mt-26 sm:mb-16 group cursor-pointer overflow-hidden" {...scrollFadeUp}>
     {href && <Link to={href} className="text-[20px] md:text-[24px] font-semibold text-[#191919]   absolute inset-0 z-10" aria-label={title} />}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
       <div>
@@ -47,7 +47,7 @@ const ProjectBlock: React.FC<{
 
         <div className="text-[14px] md:text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
       </div>
-      <p className="text-[16px] md:text-[20px] font-medium text-[#191919]  md:justify-self-end leading-7.5">
+      <p className="text-[16px] md:text-[20px] font-medium text-[#191919]  md:justify-self-end leading-6 tracking-[0%] md:tracking-normal md:leading-7.5">
         {description}
       </p>
     </div>
@@ -80,7 +80,7 @@ const OtherProjectCard: React.FC<{
     </div>
 
     <div className="text-[14px] md:text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
-    <p className="text-[16px] md:text-[20px] font-medium mt-3 leading-7.5 ">{description}</p>
+    <p className="text-[16px] md:text-[20px] font-medium mt-3 leading-6 tracking-[0%] md:tracking-normal md:leading-7.5">{description}</p>
 
 <div className="mt-4 rounded-xl overflow-hidden aspect-16/10">
   <img

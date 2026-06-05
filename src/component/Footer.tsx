@@ -41,7 +41,7 @@ const Footer = ({
 }) => (
   <footer
     className={cn(
-      `mt-8 pt-8 md:mt-32 md:pt-32  flex flex-col lg:flex-row lg:items-end
+      `mt-20 pt-16 md:mt-32 md:pt-32  flex flex-col lg:flex-row lg:items-end
       [border-top:none] bg-[repeating-linear-gradient(90deg,#B1B1B8_0,#B1B1B8_4px,transparent_4px,transparent_8px)] bg-size-[100%_1px] bg-top bg-no-repeat 
       `,
       reversed && "lg:flex-row-reverse",
@@ -110,7 +110,7 @@ const Footer = ({
       <div className={cn("flex", !reversed
             ? "justify-end"
             : "justify-start",)}>
-      <AnimatedLogo className={cn(" mb-8 lg:hidden",)} />
+      <AnimatedLogo className={cn("mt-12 mb-8 lg:hidden",)} />
       </div>
     </div>
   </footer>
