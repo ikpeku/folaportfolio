@@ -18,11 +18,6 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 
 const ease = [0.4, 0, 0.2, 1] as const;
 
-const logoVariants = {
-  rest:   { scale: 1,    transition: { duration: 0.25, ease } },
-  hover:  { scale: 1.04, transition: { duration: 0.25, ease } },
-  // active: { scale: 1.04, transition: { duration: 0.35, ease } },
-};
 
 // const logoUnderlineVariants = {
 //   rest:   { bottom: 2,  transition: { duration: 0.35, ease } },
@@ -52,10 +47,10 @@ const Header = () => {
           {() => (
             <motion.div
               className="relative inline-block"
-              variants={logoVariants}
-              initial="rest"
-              whileHover="hover"
-              animate={"rest"}
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              whileHover={{ scale: 1.04, transition: { duration: 0.25, ease } }}
             >
               <Assets.Logo />
             </motion.div>

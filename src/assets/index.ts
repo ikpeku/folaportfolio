@@ -2,6 +2,8 @@ import { ResumeIcon, EmailIcon, LinkedInIcon, Logo, ArrowCircleRight } from "./a
 import HeroBanner from "./herobanner.svg";
 
 import Kiboschool from "./kiboschool.png";
+
+
 import Kiboschool2x from "./Kiboschool@2x.png";
 import Kiboschool3x from "./Kiboschool@3x.png";
 import Kiboschool4x from "./Kiboschool@4x.png";

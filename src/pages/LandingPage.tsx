@@ -52,7 +52,7 @@ const ProjectBlock: React.FC<{
       </p>
     </div>
     <div className="rounded-xl overflow-hidden">
-      <div className="transition-transform duration-100 group-hover:scale-[1.03]">
+      <div className="transition-transform duration-500 ease-out group-hover:scale-[1.03]">
         {children}
       </div>
     </div>
@@ -70,8 +70,6 @@ const OtherProjectCard: React.FC<{
   <motion.div
     className="relative group cursor-pointer"
     {...scrollFadeUp}
-    whileHover={{ rotate: 2, transition: { type: "spring", stiffness: 350, damping: 20 } }}
-    whileTap={{ rotate: 1, scale: 0.98, transition: { type: "spring", stiffness: 400, damping: 25 } }}
   >
     {href && <Link to={href} className="text-[20px] md:text-[24px] font-semibold text-[#191919] absolute inset-0 z-10" aria-label={title} />}
     <div className="flex items-center gap-3">
@@ -82,7 +80,7 @@ const OtherProjectCard: React.FC<{
     </div>
 
     <div className="text-[14px] md:text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
-    <p className="text-[16px] md:text-[20px] font-medium mt-3 leading-7.5 max-w-md">{description}</p>
+    <p className="text-[16px] md:text-[20px] font-medium mt-3 leading-7.5 ">{description}</p>
 
 <div className="mt-4 rounded-xl overflow-hidden aspect-16/10">
   <img
@@ -111,7 +109,9 @@ const LandingPage: React.FC = () => (
       description="Designing a learning platform to support a fully remote BSc. Computer Science Degree."
       href="/kibo-school"
     >
-      <img src={Assets.Kiboschool} srcSet={Assets.KiboschoolSrcSet} alt="" className="w-full h-full max-h-155 object-cover" />
+      <img src={Assets.Kiboschool4x} 
+      // srcSet={Assets.KiboschoolSrcSet}
+       alt="" className="w-full h-full max-h-155 object-cover" />
     </ProjectBlock>
 
     <ProjectBlock
@@ -120,7 +120,9 @@ const LandingPage: React.FC = () => (
       description="Helping healthcare practitioners track their time so they can be appropriately reimbursed by the government."
       href="/time-study"
     >
-      <img src={Assets.Timestudy} srcSet={Assets.TimestudySrcSet} alt="" className="w-full h-full max-h-155 object-cover" />
+      <img src={Assets.Timestudy4x} 
+      // srcSet={Assets.TimestudySrcSet}
+       alt="" className="w-full h-full max-h-155 object-cover" />
     </ProjectBlock>
 
     <ProjectBlock
@@ -129,7 +131,9 @@ const LandingPage: React.FC = () => (
       description="Helping Christians maintain consistent prayer practice through daily guided prayers & meditations."
       href="/behold"
     >
-      <img src={Assets.Beholdshot} srcSet={Assets.BeholdshotSrcSet} alt="" className="w-full h-full max-h-155 object-cover" />
+      <img src={Assets.Beholdshot4x} 
+      // srcSet={Assets.BeholdshotSrcSet}
+       alt="" className="w-full h-full max-h-155 object-cover" />
     </ProjectBlock>
 
     
@@ -140,16 +144,16 @@ const LandingPage: React.FC = () => (
         title="Rukah"
         dates="Jan 2023 - Aug 2024"
         description="Building a wedding vendor discovery and review platform from the ground up."
-        src={Assets.Rukahshot}
-        srcSet={Assets.RukahshotSrcSet}
+        src={Assets.Rukahshot4x}
+        // srcSet={Assets.RukahshotSrcSet}
         href="/rukah"
       />
       <OtherProjectCard
         title="Undisclosed School in New York"
         dates="Jun 2025 - Jul 2025"
         description="Experimental design for an AI professional development platform to help educators grow."
-        src={Assets.Zenithshot}
-        srcSet={Assets.ZenithshotSrcSet}
+        src={Assets.Zenithshot4x}
+        // srcSet={Assets.ZenithshotSrcSet}
         href="/zenith"
       />
     </div>
