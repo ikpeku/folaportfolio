@@ -53,11 +53,11 @@ const icebergLayers = [
 ];
 
 const About = () => (
-  <div className="pt-16 md:pt-20">
+  <div className="pt-16 lg:pt-20">
 
     {/* ── Bio ── */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-      <motion.div className="space-y-5 font-medium text-[16px] md:text-[20px] leading-6 tracking-[0%] md:tracking-normal md:leading-7.5" {...fadeUp(0.1)}>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <motion.div className="space-y-5 font-medium text-[16px] lg:text-[20px] leading-6 tracking-[0%] lg:tracking-normal lg:leading-7.5" {...fadeUp(0.1)}>
         <p>
           Hi, I'm Folarin 👋. I've been designing digital products for 9 years. I approach problems from first principles to have the best chance at implementing effective solutions.
         </p>
@@ -72,8 +72,8 @@ const About = () => (
         </p>
       </motion.div>
 
-      <motion.div className="flex justify-center md:justify-end" {...fadeUp(0.2)}>
-        <div className="w-62 h-62 md:w-73.5 md:h-73.5 rounded-full overflow-hidden bg-neutral-200 shrink-0">
+      <motion.div className="flex justify-center lg:justify-end" {...fadeUp(0.2)}>
+        <div className="w-62 h-62 lg:w-73.5 lg:h-73.5 rounded-full overflow-hidden bg-neutral-200 shrink-0">
           <img
             src={Assets.Avatar}
             alt="Folarin Lawal"
@@ -100,7 +100,7 @@ const About = () => (
 
     <div className="max-w-4xl mx-auto">
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-7.5 ">
       {processCards.map((card, i) => (
         <motion.div
           key={card.title}
@@ -114,18 +114,18 @@ const About = () => (
     </div>
 
     {/* ── Iceberg desktop ── */}
-    <div className="hidden mt-20 md:grid grid-cols-1 md:grid-cols-2 items-center">
+    <div className="hidden mt-20 lg:grid grid-cols-1 lg:grid-cols-2 items-center">
       <motion.div className="flex justify-items-end " {...fadeUp(0.1)}>
         <img
           src={Assets.Iceshot}
           alt="Iceberg illustration"
-          className="w-full max-w-sm object-cover rounded-sm sm:ml-28 z-50"
+          className="w-full max-w-sm object-cover rounded-sm sm:ml-22 z-50"
         />
       </motion.div>
 
-      <motion.div className="space-y-6" {...fadeUp(0.2)}>
+      <motion.div className="" {...fadeUp(0.2)}>
         {icebergLayers.map((layer, i) => (
-          <motion.div key={layer.title} {...fadeUp(0.1 + i * 0.06)}>
+          <motion.div key={layer.title} className={`${layer.title == "Skeleton" ? "mt-16" : "mt-6"}`} {...fadeUp(0.1 + i * 0.06)}>
             <p className="text-[14px] font-bold">{layer.title}</p>
             <p className="text-[12px] font-medium leading-relaxed text-[#6A6A6A] mt-1">{layer.body}</p>
           </motion.div>
@@ -134,7 +134,7 @@ const About = () => (
     </div>
 
     {/* ── Iceberg mobile ── */}
-    <div className=" mt-20 grid grid-cols-1 items-center md:hidden ">
+    <div className=" mt-20 grid grid-cols-1 items-center lg:hidden ">
       
 
       <motion.div className="space-y-6" {...fadeUp(0.2)}>

@@ -39,9 +39,12 @@ const Footer = ({
   onClick?: () => void;
   avatartype?: "space" | "non-space"
 }) => (
+  // pt-16 lg:mt-32 lg:pt-32  
   <footer
     className={cn(
-      `mt-20 pt-16 md:mt-32 md:pt-32  flex flex-col lg:flex-row lg:items-end
+      `mt-20 
+      h-101.5 lg:h-143.25
+      flex flex-col justify-end lg:flex-row lg:items-end
       [border-top:none] bg-[repeating-linear-gradient(90deg,#B1B1B8_0,#B1B1B8_4px,transparent_4px,transparent_8px)] bg-size-[100%_1px] bg-top bg-no-repeat 
       `,
       reversed && "lg:flex-row-reverse",
@@ -67,19 +70,20 @@ const Footer = ({
       </div>
     )}
 
-    <div className={cn("flex my-4 lg:my-0 lg:justify-center", reversed ? "justify-end" : "justify-start")}>
+    <div className={cn(" flex  lg:my-0 lg:justify-center", reversed ? "justify-end" : "justify-start")}>
+     {/* w-1/3 lg:w-full max-h-112.75 max-w-sm lg:max-w-full */}
       <img
         src={avatartype ==  "space" ? Assets.Footerbannershot : Assets.HeroBanner}
         alt="Footer banner"
-        className={cn("w-1/3 lg:w-full max-h-112.75 max-w-sm md:max-w-full rounded-xl object-contain", )}
+        className={cn("w-33.25 h-33.25 lg:w-101.25 lg:h-113 rounded-xl object-contain", )}
       />
       {/* reversed && "scale-x-[-1]" */}
     </div>
-
+{/* my-4 lg:my-10  */}
     {!isDetail && (
       <div
         className={cn(
-          "my-4 md:my-10 flex flex-wrap items-center gap-2 md:gap-4 flex-1 ",
+          " my-6 lg:my-27  flex flex-wrap items-center gap-6 lg:flex-1 ",
           !reversed
             ? " lg:justify-end"
             : "lg:justify-start",
@@ -110,7 +114,7 @@ const Footer = ({
       <div className={cn("flex", !reversed
             ? "justify-end"
             : "justify-start",)}>
-      <AnimatedLogo className={cn("mt-12 mb-8 lg:hidden",)} />
+      <AnimatedLogo className={cn("mt-16.5 mb-4.5 lg:hidden",)} />
       </div>
     </div>
   </footer>

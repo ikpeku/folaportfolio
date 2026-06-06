@@ -25,7 +25,7 @@ const NAV_ITEMS = [
 
 // ── Shared primitives ────────────────────────────────────────
 const SectionLabel = ({ children, className }: { children: React.ReactNode; className?: string }) => (
-  <p className={`text-[10px] md:text-[14px] tracking-widest text-[#6A6A6A] font-semibold ${className ?? ""}`}>{children}</p>
+  <p className={`text-[10px] lg:text-[14px] tracking-widest text-[#6A6A6A] font-semibold ${className ?? ""}`}>{children}</p>
 );
 
 const Divider = ({ className }: { className?: string }) => (
@@ -93,7 +93,7 @@ const KiboSchool = () => {
   };
 
   return (
-    <div className="pt-10 md:pt-16">
+    <div className="pt-10 lg:pt-16">
 
       {/* ── Hero image ── */}
       <motion.div {...fadeUp(0.05)}>
@@ -104,24 +104,24 @@ const KiboSchool = () => {
 
       {/* ── Title + meta ── */}
       <motion.div className="mt-10" {...fadeUp(0.1)}>
-        <h1 className="text-[28px] md:text-[36px] font-medium leading-tight italic">
+        <h1 className="text-[28px] lg:text-[36px] font-medium leading-tight italic">
           Helping students stay on top of assignments
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:mt-5 mt-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:mt-5 mt-6">
           {/* Company */}
           <div>
             <p className="text-[14px] font-semibold text-[#3D3D4E]">Kibo School</p>
-            <p className="text-[14px] md:text-[16px] font-semibold text-[#6A6A6A] mt-1">Oct 2022 - Apr 2024</p>
+            <p className="text-[14px] lg:text-[16px] font-semibold text-[#6A6A6A] mt-1">Oct 2022 - Apr 2024</p>
           </div>
           {/* Role */}
           <div>
             <SectionLabel>ROLE</SectionLabel>
-            <p className="text-[14px] md:text-[18px] font-medium leading-snug mt-1">Solo Product Designer</p>
+            <p className="text-[14px] lg:text-[18px] font-medium leading-snug mt-1">Solo Product Designer</p>
           </div>
           {/* Team */}
           <div>
             <SectionLabel>TEAM</SectionLabel>
-            <p className="text-[14px] md:text-[18px] font-medium leading-snug mt-1">1 Product Manager & 2 Full Stack Developers</p>
+            <p className="text-[14px] lg:text-[18px] font-medium leading-snug mt-1">1 Product Manager & 2 Full Stack Developers</p>
           </div>
         </div>
       </motion.div>
@@ -184,10 +184,10 @@ const KiboSchool = () => {
             <motion.div className="grid grid-cols-1" {...fadeUp(0.1)}>
               <div className="mb-4" >
                 <SectionLabel>Context</SectionLabel>
-                <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+                <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                   A learning platform to support a fully remote BSc. Computer Science Degree
                 </h2>
-                <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+                <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                   <p>Kibo School offers an Africa-focused, fully online BSc. in Computer Science. Students are dispersed across the continent — no campus, no in-person lectures, no face-to-face support structures.</p>
                   <p>I joined as a Product Manager embedded with the engineering team to redesign the core learning platform — the digital space students spend most of their academic lives in.</p>
                 </div>
@@ -203,10 +203,10 @@ const KiboSchool = () => {
           <section id="EvaluatingAnchor">
             <motion.div {...fadeUp(0.1)}>
               <SectionLabel>Evaluating Anchor</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+              <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                 Listening to students after launch
               </h2>
-              <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 <p>After launching the platform, we immediately began receiving feedback through the built-in feedback form. I worked with the PM to send out surveys evaluating how well the platform addressed issues students had with their prior learning tools, then synthesised the results alongside complaint patterns from the issue tracker. We then planned and carried out user interviews to understand the reasons behind what we were seeing.</p>
                 <p>Pulling all three sources together gave us a clear picture of the most pressing issues, how widespread they were and what was causing them.</p>
               </div>
@@ -218,12 +218,12 @@ const KiboSchool = () => {
 
               </div>
 
-              <div className="my-10 md:my-24">
-                <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+              <div className="my-10 lg:my-24">
+                <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                   Four pain points, one urgent
                 </h2>
 
-                <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+                <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                   <p>Bringing all the feedback together, students were struggling with four main issues: tracking assignment due dates and where to submit, navigating certain parts of the platform, tracking their progress through course content and keeping track of upcoming events like live classes and office hours.</p>
                   <p>Assignment tracking rose to the top and rightfully so, late submissions carried a 10% grade penalty. Instructors also reported that students frequently cited forgetting to submit as their reason for missing deadlines. The stakes were too high to address anything else first.</p>
                 </div>
@@ -245,36 +245,36 @@ const KiboSchool = () => {
             <motion.div {...fadeUp(0.1)}>
 
               <SectionLabel>The Problem</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-4">
+              <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-4">
                 Defining the problem
               </h2>
-              <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 <p>Before sketching anything, the PM and I aligned on a clear problem statement to give us a benchmark to measure any solution against.</p>
               </div>
 
 
-              <div className="bg-[#F9FAFB] border-[#E5E5E5] p-4 md:p-8 my-8">
+              <div className="bg-[#F9FAFB] border-[#E5E5E5] p-4 lg:p-8 my-8">
                 <p className="text-[14px] italic tracking-widest text-[#6A6A6A] font-semibold mb-3">Problem Statement</p>
-                <p className="text-[16px] md:text-[18px] italic font-semibold leading-6.75 text-[#3D3D4E]">
+                <p className="text-[16px] lg:text-[18px] italic font-semibold leading-6.75 text-[#3D3D4E]">
                   Students can't get a quick view of what assignments are due across all their courses and they have no reliable way to confirm they've submitted in all required places.
                 </p>
               </div>
 
-              <p className="my-6 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <p className="my-6 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 From this we created two “How Might We” statements to begin exploring solutions:
               </p>
 
 
-              <div className="bg-[#F9FAFB] border-[#E5E5E5] p-4 md:p-8 my-8 border-l-2 border-l-[#5D5FEF]">
+              <div className="bg-[#F9FAFB] border-[#E5E5E5] p-4 lg:p-8 my-8 border-l-2 border-l-[#5D5FEF]">
                 <p className="text-[14px] italic tracking-widest text-[#6A6A6A] font-semibold mb-3">How might we...</p>
-                <p className="text-[16px] md:text-[18px] italic font-semibold leading-6.75 text-[#3D3D4E]">
+                <p className="text-[16px] lg:text-[18px] italic font-semibold leading-6.75 text-[#3D3D4E]">
                   Give students a quick view of what assignments are due across all their courses?
                 </p>
               </div>
 
-              <div className="bg-[#F9FAFB] border-[#E5E5E5] p-4 md:p-8 my-8 border-l-2 border-l-[#5D5FEF]">
+              <div className="bg-[#F9FAFB] border-[#E5E5E5] p-4 lg:p-8 my-8 border-l-2 border-l-[#5D5FEF]">
                 <p className="text-[14px] italic tracking-widest text-[#6A6A6A] font-semibold mb-3">How might we...</p>
-                <p className="text-[16px] md:text-[18px] italic font-semibold leading-6.75 text-[#3D3D4E]">
+                <p className="text-[16px] lg:text-[18px] italic font-semibold leading-6.75 text-[#3D3D4E]">
                   Give students a reliable way to confirm they've submitted their assignments in all required places?
                 </p>
               </div>
@@ -289,10 +289,10 @@ const KiboSchool = () => {
             <motion.div {...fadeUp(0.1)}>
 
               <SectionLabel>Explorations</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-4">
+              <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-4">
                 Exploring directions, then narrowing down
               </h2>
-              <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 <p>We explored five potential directions and evaluated each against how well it resolved both HMW statements, how naturally it fit into existing student behaviour on the platform and what was technically feasible for our team to ship.</p>
               </div>
 
@@ -300,7 +300,7 @@ const KiboSchool = () => {
                 <ImageCard seed={Assets.Explodebannerone} className="w-full " />
               </div>
 
-              <p className="my-6 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <p className="my-6 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 The widget approach stood out because it solved both HMW statements without requiring any change in behaviour or an extra page to visit. Especially since we already had a status section on assignment pages.
               </p>
 
@@ -313,10 +313,10 @@ const KiboSchool = () => {
             <motion.div className="grid grid-cols-1 " {...fadeUp(0.1)}>
               <div className="mb-4" >
                 <SectionLabel>Design & Testing</SectionLabel>
-                <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+                <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                   Two prototypes, tested comparatively
                 </h2>
-                <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+                <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                   <p>I explored alternative designs around three questions: where should the widgets live, how should they look and what information should they show. From sketches I built two prototypes for each widget then ran comparative usability tests with students to observe: where they hesitated, what was unclear and which version gave them more confidence.</p>
                 </div>
               </div>
@@ -327,7 +327,7 @@ const KiboSchool = () => {
               </div>
 
 
-              <p className="my-6 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <p className="my-6 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 I iterated based on usability findings, then aligned with the PM to confirm the design solved our problem statement and was feasible before handing off to development. Handoff included full specifications for all states (i.e incomplete, submitted, graded, overdue). As development progressed, I reviewed builds to flag anything that deviated from the intended experience before the widgets went live.
               </p>
 
@@ -335,7 +335,7 @@ const KiboSchool = () => {
               <div className="mt-6">
                 <ImageCard seed={Assets.Designtestingone} className="w-full" />
                 <ImageCard seed={Assets.Designtestingtwo} className="w-full" />
-                <p className="my-6 text-center text-[14px] md:text-[18px] text-[#3D3D4E] font-semibold">Submission Widget Variants</p>
+                <p className="my-6 text-center text-[14px] lg:text-[18px] text-[#3D3D4E] font-semibold">Submission Widget Variants</p>
               </div>
 
             </motion.div>
@@ -347,24 +347,24 @@ const KiboSchool = () => {
             <motion.div className="grid grid-cols-1 " {...fadeUp(0.1)}>
               <div className="mb-4" >
                 <SectionLabel>Impact</SectionLabel>
-                <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+                <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                   Validating the Solution
                 </h2>
-                <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+                <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                   <p>We launched assignment widgets in time for the January term. After a couple months we carried out a follow up survey and interviews to evaluate the solution.</p>
                 </div>
               </div>
 
-              <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-8 ">
-                  <p className="text-[14px] md:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
-                  <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+              <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                  <p className="text-[14px] lg:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
+                  <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Rating in students confidence that they know which assignments are due when across all courses.
                   </p>
                 </div>
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-8 ">
-                  <p className="text-[14px] md:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
-                  <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                  <p className="text-[14px] lg:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
+                  <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Rating in students confidence that they know which assignments are due when across all courses.
                   </p>
                 </div>
@@ -372,37 +372,37 @@ const KiboSchool = () => {
               </div>
 
 
-              <p className="my-2 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <p className="my-2 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 From the follow up interviews with 5 students:
               </p>
 
 
-               <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+               <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-8 ">
-                  <p className="text-[14px] md:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
-                  <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                  <p className="text-[14px] lg:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
+                  <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Rating in students confidence that they know which assignments are due when across all courses.
                   </p>
                 </div>
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-8 ">
-                  <p className="text-[14px] md:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
-                  <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                  <p className="text-[14px] lg:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
+                  <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Rating in students confidence that they know which assignments are due when across all courses.
                   </p>
                 </div>
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-8 ">
-                  <p className="text-[14px] md:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
-                  <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                  <p className="text-[14px] lg:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
+                  <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Rating in students confidence that they know which assignments are due when across all courses.
                   </p>
                 </div>
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-8 ">
-                  <p className="text-[14px] md:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
-                  <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                  <p className="text-[14px] lg:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
+                  <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Rating in students confidence that they know which assignments are due when across all courses.
                   </p>
                 </div>
@@ -410,7 +410,7 @@ const KiboSchool = () => {
 
               </div>
 
-              <p className="my-6 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <p className="my-6 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 Before the redesign students had to navigate into every individual course to find upcoming assignments. After launching the upcoming assignments widget 47% of students surveyed rarely or never needed to. Instructors also reported fewer students saying the forgot as their reason for submitting late.
               </p>
 
@@ -425,7 +425,7 @@ const KiboSchool = () => {
             <motion.div {...fadeUp(0.1)}>
               <div className="mb-4" >
                 <SectionLabel>Reflections</SectionLabel>
-                <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+                <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                   What stood out looking back
                 </h2>
               </div>

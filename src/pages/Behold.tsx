@@ -26,7 +26,7 @@ const NAV_ITEMS = [
 
 // ── Shared primitives ─────────────────────────────────────────
 const SectionLabel = ({ children }: { children: React.ReactNode }) => (
-  <p className="text-[10px] md:text-[14px] tracking-widest text-[#6A6A6A] font-semibold">{children}</p>
+  <p className="text-[10px] lg:text-[14px] tracking-widest text-[#6A6A6A] font-semibold">{children}</p>
 );
 
 const Divider = ({ className = "my-16" }: { className?: string }) => (
@@ -41,7 +41,7 @@ const ImageCard = ({ caption, url, className = "" }: { caption?: string; url: st
     <div className={`overflow-hidden ${className}`}>
       <img src={url} alt="" className="w-full h-full object-center" />
     </div>
-    {caption && <p className="text-[#6A6A6A] text-center text-[14px] md:text-[16px] font-medium max-w-md mx-auto mt-4">{caption}</p>}
+    {caption && <p className="text-[#6A6A6A] text-center text-[14px] lg:text-[16px] font-medium max-w-md mx-auto mt-4">{caption}</p>}
   </motion.div>
 );
 
@@ -125,16 +125,16 @@ const ResearchIMAGES = [
 
 const GridImagesCard = ({ title, caption, urls }: { title: string; caption: string; urls: string[] }) => (
   <div>
-    <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">{title}</h2>
-    <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+    <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">{title}</h2>
+    <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
       <p>{caption}</p>
     </div>
-    <div className={`mt-6 grid gap-4 grid-cols-1 md:grid-cols-2`}>
+    <div className={`mt-6 grid gap-4 grid-cols-1 lg:grid-cols-2`}>
       {urls.map((url, i) => (
         <ImageCard
           key={i}
           url={url}
-          className={`w-full  md:col-span-2`}
+          className={`w-full  lg:col-span-2`}
         />
       ))}
     </div>
@@ -177,7 +177,7 @@ const Behold = () => {
   };
 
   return (
-    <div className="pt-10 md:pt-16">
+    <div className="pt-10 lg:pt-16">
 
       {/* ── Hero banner ── */}
       <motion.div {...fadeUp(0.05)}>
@@ -188,21 +188,21 @@ const Behold = () => {
 
       {/* ── Title + meta ── */}
       <motion.div className="mt-10" {...fadeUp(0.1)}>
-        <h1 className="text-[28px] md:text-[36px] font-medium leading-tight italic max-w-4xl">
+        <h1 className="text-[28px] lg:text-[36px] font-medium leading-tight italic max-w-4xl">
           Redesigning Reflections & Sharing around user context.
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:mt-5 mt-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:mt-5 mt-6">
           <div>
             <p className="text-[14px] font-semibold text-[#3D3D4E]">Behold</p>
-            <p className="text-[14px] md:text-[16px] font-semibold text-[#6A6A6A] mt-1">Dec 2019 - Jan 2021</p>
+            <p className="text-[14px] lg:text-[16px] font-semibold text-[#6A6A6A] mt-1">Dec 2019 - Jan 2021</p>
           </div>
           <div>
             <SectionLabel>ROLE</SectionLabel>
-            <p className="text-[14px] md:text-[18px] font-medium leading-snug mt-1">Solo Product Designer</p>
+            <p className="text-[14px] lg:text-[18px] font-medium leading-snug mt-1">Solo Product Designer</p>
           </div>
           <div>
             <SectionLabel>TEAM</SectionLabel>
-            <p className="text-[14px] md:text-[18px] font-medium leading-snug mt-1">2 Product Owners, 1 Product Manager, 2 Full Stack Developers</p>
+            <p className="text-[14px] lg:text-[18px] font-medium leading-snug mt-1">2 Product Owners, 1 Product Manager, 2 Full Stack Developers</p>
           </div>
         </div>
       </motion.div>
@@ -257,10 +257,10 @@ const Behold = () => {
           <section id="Context">
             <motion.div {...fadeUp(0.1)}>
               <SectionLabel>Context</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+              <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                 Outgrowing a Newsletter
               </h2>
-              <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 <p>The Behold team had been running a prayer newsletter delivering daily Christian meditations to a growing audience. What made their approach different was a focus on accessibility. Meditations were 10 minutes or less, audio-based and paired with accompanying scripture for reference. By the time they reached out to our team, they had grown to 200+ subscribers and were already partnering with authors and voice narrators to produce content.</p>
                 <p>The newsletter had proven there was an audience so the Behold team decided it was time to go further. They partnered with us to design and build Behold, a mobile app that brought the newsletter experience to iOS and Android. The Behold app launched in March 2020 with:</p>
               </div>
@@ -281,32 +281,32 @@ const Behold = () => {
           <section id="Discovery">
             <motion.div {...fadeUp(0.1)}>
               <SectionLabel>Discovery</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+              <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                 After launch
               </h2>
-              <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 <p>About 4 months after launching we saw encouraging metrics: 67% of newsletter subscribers converted to app users, 78% of meditations started were completed and 45% of monthly active users visited the app daily. We also saw two metrics that weren’t performing so well.</p>
               </div>
 
 
               <div className="mt-4 grid grid-cols-1  gap-8">
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 border-l-2 border-l-[#211A4C]">
-                  <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] lg:mb-6">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 border-l-2 border-l-[#211A4C]">
+                  <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] lg:mb-6">
                     Reflection Completion Rate
                   </p>
-                  <p className="text-[14px] md:text-[24px] tracking-widest text-[#211A4C] font-bold mb-3">22%</p>
-                  <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                  <p className="text-[14px] lg:text-[24px] tracking-widest text-[#211A4C] font-bold mb-3">22%</p>
+                  <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Users were completing meditations but skipping reflection.
                   </p>
                 </div>
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 border-l-2 border-l-[#211A4C]">
-                  <p className="text-[16px] md:text-[18px] font-semibold leading-6 text-[#6A6A6A] lg:mb-6">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 border-l-2 border-l-[#211A4C]">
+                  <p className="text-[16px] lg:text-[18px] font-semibold leading-6 text-[#6A6A6A] lg:mb-6">
                     Share Rate
                   </p>
-                  <p className="text-[14px] md:text-[24px] tracking-widest text-[#211A4C] font-bold mb-3">5% </p>
-                  <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
+                  <p className="text-[14px] lg:text-[24px] tracking-widest text-[#211A4C] font-bold mb-3">5% </p>
+                  <p className="text-[14px] lg:text-[16px] font-medium leading-6 text-[#6A6A6A]">
                     The meditation screen had a share icon which allowed users to send meditations to their contacts via iMessage, WhatsApp or email.
                   </p>
                 </div>
@@ -325,10 +325,10 @@ const Behold = () => {
           <section id="Research">
             <motion.div {...fadeUp(0.1)}>
               <SectionLabel>Research</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+              <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                 Understanding the metrics
               </h2>
-              <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 <p>We carried out user interviews with 12 active users focusing on their experience with the reflection feature and sharing. The interviews surfaced four findings across the two features with a common root cause.</p>
               </div>
 
@@ -349,12 +349,12 @@ const Behold = () => {
                         <div className="w-[0.1] border border-[#B1B1B8] flex-1 border-dashed" />
                       </div>
 
-                      <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 space-y-4">
-                        <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#191919] ">
+                      <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 space-y-4">
+                        <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#191919] ">
                           Audio-only users forgot reflections existed
                         </p>
-                        <p className="text-[14px] md:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">A significant portion of users listened while multitasking (i.e commuting, cooking, getting ready, etc). By the time the audio ended, they had moved on. The reflection prompt lived on a separate page they never reached.</p>
-                        <p className="border-l-[#211A4C] border-l-2 pl-4 italic text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                        <p className="text-[14px] lg:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">A significant portion of users listened while multitasking (i.e commuting, cooking, getting ready, etc). By the time the audio ended, they had moved on. The reflection prompt lived on a separate page they never reached.</p>
+                        <p className="border-l-[#211A4C] border-l-2 pl-4 italic text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                           "To be honest I didn't even realise there was a place to add reflections, I assumed the meditation ended."
                         </p>
                       </div>
@@ -367,12 +367,12 @@ const Behold = () => {
                         <div className="w-[0.1] border border-[#B1B1B8] flex-1 border-dashed" />
                       </div>
 
-                      <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 space-y-4">
-                        <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#191919] ">
+                      <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 space-y-4">
+                        <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#191919] ">
                           Typing felt like too much effort
                         </p>
-                        <p className="text-[14px] md:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">The core appeal of Behold was fitting prayer into a busy schedule. Typing a reflection felt like an extra task rather than a natural part of the experience.</p>
-                        <p className="border-l-[#211A4C] border-l-2 pl-4 italic text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                        <p className="text-[14px] lg:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">The core appeal of Behold was fitting prayer into a busy schedule. Typing a reflection felt like an extra task rather than a natural part of the experience.</p>
+                        <p className="border-l-[#211A4C] border-l-2 pl-4 italic text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                           "I’d like to use it but most times I don't feel like typing.”
                         </p>
                       </div>
@@ -398,11 +398,11 @@ const Behold = () => {
                         <div className="w-[0.1] border border-[#B1B1B8] flex-1 border-dashed" />
                       </div>
 
-                      <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 space-y-4">
-                        <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#191919] ">
+                      <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 space-y-4">
+                        <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#191919] ">
                           Audio-only users missed the share icon entirely
                         </p>
-                        <p className="text-[14px] md:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">The share icon sat on the meditation screen alongside a save icon. Audio-only users weren’t actively looking at the screen during meditations.</p>
+                        <p className="text-[14px] lg:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">The share icon sat on the meditation screen alongside a save icon. Audio-only users weren’t actively looking at the screen during meditations.</p>
 
                       </div>
                     </div>
@@ -414,12 +414,12 @@ const Behold = () => {
                         <div className="w-[0.1] border border-[#B1B1B8] flex-1 border-dashed" />
                       </div>
 
-                      <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 space-y-4">
-                        <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#191919] ">
+                      <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 space-y-4">
+                        <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#191919] ">
                           Users who saw it didn't feel compelled to use it
                         </p>
-                        <p className="text-[14px] md:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">For users who did read along with the scripture, the share icon was just a button on a page. There was no surrounding prompt, no moment, nothing that made sharing feel relevant or timely. Without a reason to act, most didn't.</p>
-                        <p className="border-l-[#211A4C] border-l-2 pl-4 italic text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                        <p className="text-[14px] lg:text-[16px] tracking-widest text-[#3D3D4E] font-medium ">For users who did read along with the scripture, the share icon was just a button on a page. There was no surrounding prompt, no moment, nothing that made sharing feel relevant or timely. Without a reason to act, most didn't.</p>
+                        <p className="border-l-[#211A4C] border-l-2 pl-4 italic text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                           "I notice it but I just don’t use it.”
                         </p>
                       </div>
@@ -431,14 +431,14 @@ const Behold = () => {
 
 
                 <div>
-                  <p className="font-medium text-[#3D3D4E] text-[14px] md:text-[18px] leading-6.75" >The interviews revealed a common thread across both features: users were missing them entirely. The reflection feature and the sharing both lived in parts of the experience that a large portion of users, especially those listening on the go, never reached. Addressing visibility was the shared starting point for solutions.</p>
-                  <div className="my-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <p className="font-medium text-[#3D3D4E] text-[14px] lg:text-[18px] leading-6.75" >The interviews revealed a common thread across both features: users were missing them entirely. The reflection feature and the sharing both lived in parts of the experience that a large portion of users, especially those listening on the go, never reached. Addressing visibility was the shared starting point for solutions.</p>
+                  <div className="my-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {
                       ResearchIMAGES.map(v => <ImageCard key={v.title} url={v.src} className="w-full border-3 border-[#FFC60B] rounded-lg " />)
                     }
                   </div>
 
-                  <p className="max-w-lg mx-auto text-center font-medium text-[#3D3D4E] text-[14px] md:text-[16px] leading-6.75" >The three meditation screens showing the audio player (along with options to save and share), the scripture for the day and a space to reflect.</p>
+                  <p className="max-w-lg mx-auto text-center font-medium text-[#3D3D4E] text-[14px] lg:text-[16px] leading-6.75" >The three meditation screens showing the audio player (along with options to save and share), the scripture for the day and a space to reflect.</p>
 
                 </div>
 
@@ -452,48 +452,48 @@ const Behold = () => {
           <section id="FramingTheProblem">
             <motion.div {...fadeUp(0.1)}>
               <SectionLabel>Framing the Problem</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+              <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                 How might we...
               </h2>
-              <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 <p>Based on our findings the PM and I created “How Might We” statements to frame the problems as opportunities and guide explorations.</p>
               </div>
 
 
               <div className="mt-4 grid grid-cols-1  gap-8">
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 border-l-2 border-l-[#211A4C]">
-                  <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 border-l-2 border-l-[#211A4C]">
+                  <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
                     How might we...
                   </p>
-                  <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                  <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Surface the reflection feature to users who are listening rather than looking at their screens?
                   </p>
                 </div>
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 border-l-2 border-l-[#211A4C]">
-                  <p className="text-[16px] md:text-[18px] font-semibold leading-6 text-[#6A6A6A]">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 border-l-2 border-l-[#211A4C]">
+                  <p className="text-[16px] lg:text-[18px] font-semibold leading-6 text-[#6A6A6A]">
                     How might we...
                   </p>
-                  <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
+                  <p className="text-[14px] lg:text-[16px] font-medium leading-6 text-[#6A6A6A]">
                     Make adding a reflection feel less like extra work?
                   </p>
                 </div>
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 border-l-2 border-l-[#211A4C]">
-                  <p className="text-[16px] md:text-[18px] font-semibold leading-6 text-[#6A6A6A]">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 border-l-2 border-l-[#211A4C]">
+                  <p className="text-[16px] lg:text-[18px] font-semibold leading-6 text-[#6A6A6A]">
                     How might we...
                   </p>
-                  <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
+                  <p className="text-[14px] lg:text-[16px] font-medium leading-6 text-[#6A6A6A]">
                     Surface the sharing option to users who are listening rather than reading?
                   </p>
                 </div>
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 border-l-2 border-l-[#211A4C]">
-                  <p className="text-[16px] md:text-[18px] font-semibold leading-6 text-[#6A6A6A]">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 border-l-2 border-l-[#211A4C]">
+                  <p className="text-[16px] lg:text-[18px] font-semibold leading-6 text-[#6A6A6A]">
                     How might we...
                   </p>
-                  <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
+                  <p className="text-[14px] lg:text-[16px] font-medium leading-6 text-[#6A6A6A]">
                     Compel users to share?
                   </p>
                 </div>
@@ -514,43 +514,43 @@ const Behold = () => {
           <section id="Explorations">
             <motion.div {...fadeUp(0.1)}>
               <SectionLabel>Explorations</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+              <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                 Exploring directions, then narrowing down
               </h2>
-              <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 <p>The PM and I explored a range of directions then evaluated each against a shared set of criteria to identify which were worth taking forward.</p>
               </div>
 
 
               <div className="mt-4 grid grid-cols-1 rounded-lg overflow-hidden">
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 flex items-center gap-4">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 flex items-center gap-4">
                   <img src={Assets.Diamondicon} className="w-4 h-4" />
-                  <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
+                  <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
                     Does it address the visibility problem for audio-only users specifically?
                   </p>
                 </div>
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 flex items-center gap-4">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 flex items-center gap-4">
                   <img src={Assets.Diamondicon} className="w-4 h-4" />
-                  <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
+                  <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
                     Does it resolve the issue without adding new friction elsewhere in the experience?
                   </p>
                 </div>
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 flex items-center gap-4">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 flex items-center gap-4">
                   <img src={Assets.Diamondicon} className="w-4 h-4" />
-                  <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
+                  <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
                     Does it feel native to the meditation flow rather than interrupting it?
                   </p>
                 </div>
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 flex items-center gap-4">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 flex items-center gap-4">
                   <img src={Assets.Diamondicon} className="w-4 h-4" />
-                  <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
+                  <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
                     Does it address both features or require separate solutions for each?
                   </p>
                 </div>
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 flex items-center gap-4">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 flex items-center gap-4">
                   <img src={Assets.Diamondicon} className="w-4 h-4" />
-                  <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
+                  <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] ">
                     Is it technically feasible within the current app architecture?
                   </p>
                 </div>
@@ -562,7 +562,7 @@ const Behold = () => {
               </div>
 
 
-              <div className="mt-12 mb-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="mt-12 mb-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {
                   BeholdexplorationsImages.map(v => <ImageCard key={v.title} url={v.src} className="w-full" />)
                 }
@@ -584,25 +584,25 @@ const Behold = () => {
           <section id="DesignTesting">
             <motion.div {...fadeUp(0.1)}>
               <SectionLabel>Design & Testing</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+              <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                 Testing alternatives
               </h2>
-              <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 <p>With a clear direction, I designed three alternatives of the chosen solutions. I explored the order (i.e should users be asked to reflect first then share or vice versa) and how the call to reflect and share could be presented then tested them with 8 users.</p>
               </div>
 
 
 
 
-              <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-24">
+              <div className="my-6 grid grid-cols-1 lg:grid-cols-2 gap-24">
                 {
                   DESIGNSCREENS.map(v => (
                     <div className="text-center">
                       <ImageCard key={v.url} url={v.url} className="w-full border-3 border-[#FFC60B] rounded-lg " />
-                      {v.caption && <h2 className="text-[16px] md:text-[18px] text-[#3D3D4E] font-semibold my-2">
+                      {v.caption && <h2 className="text-[16px] lg:text-[18px] text-[#3D3D4E] font-semibold my-2">
                         {v.caption}
                       </h2>}
-                      {v.description && <div className="font-medium text-[14px] md:text-[16px] leading-6.75 text-[#6A6A6A]">
+                      {v.description && <div className="font-medium text-[14px] lg:text-[16px] leading-6.75 text-[#6A6A6A]">
                         <p>{v.description}</p>
                       </div>}
 
@@ -613,10 +613,10 @@ const Behold = () => {
 
               <div className="text-center max-w-md mx-auto">
 
-                <h2 className="text-[16px] md:text-[18px] text-[#3D3D4E] font-semibold my-2">
+                <h2 className="text-[16px] lg:text-[18px] text-[#3D3D4E] font-semibold my-2">
                   Option 3
                 </h2>
-                <div className="font-medium text-[14px] md:text-[16px] leading-6.75 text-[#6A6A6A]">
+                <div className="font-medium text-[14px] lg:text-[16px] leading-6.75 text-[#6A6A6A]">
                   <p>Separating reflecting and sharing into sequential screens to improve both without distractions.</p>
                 </div>
 
@@ -626,10 +626,10 @@ const Behold = () => {
 
               <div>
 
-                <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+                <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                   The winning design
                 </h2>
-                <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+                <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                   <p>6/8 participants preferred option 2 which opened with a call to share that activated the native device share sheet then sent a web preview link (via message or email) that recipients could open and listen to without downloading the app. I iterated on the design of the reflection section to allow users to use chips for quick responses and/or a  text field.</p>
                   <p>I aligned with the PM to confirm the design resolved the problems then made some minor updates before handing off to development.</p>
                 </div>
@@ -639,23 +639,23 @@ const Behold = () => {
               </div>
 
 
-              <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-24">
+              <div className="my-6 grid grid-cols-1 lg:grid-cols-2 gap-24">
                 <ImageCard url={Assets.Beholddesignfive} className="w-full border-3 border-[#FFC60B] rounded-lg " />
                 <ImageCard url={Assets.Beholddesignsix} className="w-full border-3 border-[#FFC60B] rounded-lg " />
               </div>
 
-              <div className="text-center max-w-md mx-auto font-medium text-[14px] md:text-[16px] leading-6.75 text-[#6A6A6A]">
+              <div className="text-center max-w-md mx-auto font-medium text-[14px] lg:text-[16px] leading-6.75 text-[#6A6A6A]">
                 <p>A call to action to share and reflect pops up at a point lined up with the voice narrators call out towards the end the meditation.</p>
               </div>
 
 
-              <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-24">
+              <div className="my-6 grid grid-cols-1 lg:grid-cols-2 gap-24">
                 <ImageCard url={Assets.Beholddesignseven} className="w-full border-3 border-[#FFC60B] rounded-lg " />
                 <ImageCard url={Assets.Beholddesigneight} className="w-full border-3 border-[#FFC60B] rounded-lg " />
               </div>
 
 
-              <div className="text-center max-w-md mx-auto font-medium text-[14px] md:text-[16px] leading-6.75 text-[#6A6A6A]">
+              <div className="text-center max-w-md mx-auto font-medium text-[14px] lg:text-[16px] leading-6.75 text-[#6A6A6A]">
                 <p>Recipients of shared meditations get a link which allows them to listen  without downloading the app.</p>
               </div>
 
@@ -674,10 +674,10 @@ const Behold = () => {
           <section id="Impact">
             <motion.div {...fadeUp(0.1)}>
               <SectionLabel>Impact</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+              <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                 Results
               </h2>
-              <div className="font-medium space-y-4 text-[14px] md:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <div className="font-medium space-y-4 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 <p>3 months after the shipping the redesign, we confirmed movement on both metrics in Firebase.</p>
               </div>
 
@@ -688,24 +688,24 @@ const Behold = () => {
                     <p className="text-[14px] font-semibold text-[#6A6A6A] ">Reflection Completion Rate</p>
                     <hr className=" border-dotted flex-1 border-[#6A6A6A]" />
                   </div>
-                  <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-                    <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 ">
-                      <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] lg:mb-6">
+                    <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 ">
+                      <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] lg:mb-6">
                         Participation Increase
                       </p>
-                      <p className="text-[14px] md:text-[24px] tracking-widest text-[#6A6A6A] font-bold mb-3">22%</p>
-                      <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                      <p className="text-[14px] lg:text-[24px] tracking-widest text-[#6A6A6A] font-bold mb-3">22%</p>
+                      <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                         From existing and new clients. This was more than double the 50% adoption target set at the start.
                       </p>
                     </div>
 
-                    <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 ">
-                      <p className="text-[16px] md:text-[18px] font-semibold leading-6 text-[#6A6A6A] lg:mb-6">
+                    <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 ">
+                      <p className="text-[16px] lg:text-[18px] font-semibold leading-6 text-[#6A6A6A] lg:mb-6">
                         Mobile Driven Growth
                       </p>
-                      <p className="text-[14px] md:text-[24px] tracking-widest text-[#211A4C] font-bold mb-3">29% <span className="text-[#007F61] text-[18px] font-[Nunito Sans] ">↑30%</span></p>
-                      <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
+                      <p className="text-[14px] lg:text-[24px] tracking-widest text-[#211A4C] font-bold mb-3">29% <span className="text-[#007F61] text-[18px] font-[Nunito Sans] ">↑30%</span></p>
+                      <p className="text-[14px] lg:text-[16px] font-medium leading-6 text-[#6A6A6A]">
                         Most of the new participation came from mobile app users, not contracted observers.
                       </p>
                     </div>
@@ -723,24 +723,24 @@ const Behold = () => {
                     <p className="text-[14px] font-semibold text-[#6A6A6A] ">Share Rate</p>
                     <hr className=" border-dotted flex-1 border-[#6A6A6A]" />
                   </div>
-                  <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-                    <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 ">
-                      <p className="text-[16px] md:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] lg:mb-6">
+                    <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 ">
+                      <p className="text-[16px] lg:text-[18px] font-semibold leading-6.75 text-[#6A6A6A] lg:mb-6">
                         Before Redesign
                       </p>
-                      <p className="text-[14px] md:text-[24px] tracking-widest text-[#6A6A6A] font-bold mb-3">5%</p>
-                      <p className="text-[14px] md:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
+                      <p className="text-[14px] lg:text-[24px] tracking-widest text-[#6A6A6A] font-bold mb-3">5%</p>
+                      <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                         Sharing was only accessible on the meditation page plus there was no motivation to use it.
                       </p>
                     </div>
 
-                    <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 md:p-6 ">
-                      <p className="text-[16px] md:text-[18px] font-semibold leading-6 text-[#6A6A6A] lg:mb-6">
+                    <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6 ">
+                      <p className="text-[16px] lg:text-[18px] font-semibold leading-6 text-[#6A6A6A] lg:mb-6">
                         After Redesign
                       </p>
-                      <p className="text-[14px] md:text-[24px] tracking-widest text-[#211A4C] font-bold mb-3">16% <span className="text-[#007F61] text-[18px] font-[Nunito Sans] ">↑3%</span></p>
-                      <p className="text-[14px] md:text-[16px] font-medium leading-6 text-[#6A6A6A]">
+                      <p className="text-[14px] lg:text-[24px] tracking-widest text-[#211A4C] font-bold mb-3">16% <span className="text-[#007F61] text-[18px] font-[Nunito Sans] ">↑3%</span></p>
+                      <p className="text-[14px] lg:text-[16px] font-medium leading-6 text-[#6A6A6A]">
                         Dedicated call to share gave context and encouraged user to act.
                       </p>
                     </div>
@@ -765,7 +765,7 @@ const Behold = () => {
           <section id="Reflections">
             <motion.div {...fadeUp(0.1)}>
               <SectionLabel>Reflections</SectionLabel>
-              <h2 className="text-[20px] md:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
+              <h2 className="text-[20px] lg:text-[24px] text-[#3D3D4E] font-semibold leading-7.5 my-6">
                 Looking back
               </h2>
               <div className="space-y-5 max-w-2xl">

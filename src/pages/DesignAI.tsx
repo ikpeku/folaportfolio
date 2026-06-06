@@ -66,11 +66,11 @@ const projects = [
 ];
 
 const DesignAI = () => (
-  <div className="py-16 md:py-20">
+  <div className="py-16 lg:py-20">
 
     {/* ── Intro ── */}
     <motion.p
-      className="text-[22px] md:text-[24px] font-medium leading-snug max-w-xl"
+      className="text-[22px] lg:text-[24px] font-medium leading-snug max-w-xl"
       {...fadeUp(0.1)}
     >
       Exploring how A.I can sharpen the design process — for myself, other designers and the cross-functional teams we work closest with 🤖
@@ -84,12 +84,12 @@ const DesignAI = () => (
       {projects.map((p, i) => (
         <motion.div
           key={i}
-          className={`grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center ${p.flip ? "md:[&>*:first-child]:order-2" : ""}`}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center ${p.flip ? "lg:[&>*:first-child]:order-2" : ""}`}
           {...fadeUp(0.1)}
         >
           {/* Text */}
           <div>
-            <h2 className="text-[18px] md:text-[20px] font-semibold leading-snug">{p.title}</h2>
+            <h2 className="text-[18px] lg:text-[20px] font-semibold leading-snug">{p.title}</h2>
             <p className="mt-4 text-[16px] leading-relaxed text-[#3D3D4E]">{p.body}</p>
             <Meta stage={p.stage} platform={p.platform} buildingWith={p.buildingWith} />
             <div className="mt-6">

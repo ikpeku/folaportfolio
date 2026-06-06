@@ -20,7 +20,7 @@ const scrollFadeUp = {
 // ——————————————————— Section components ———————————————————
 
 const SelectedProjectsHeader = ({ icon, title }: { icon: React.ReactNode; title: string }) => (
-  <motion.h2 className="text-[18px] md:text-[20px] font-semibold my-8 sm:mt-32 sm:mb-24 " {...scrollFadeUp}>
+  <motion.h2 className="text-[18px] lg:text-[20px] font-semibold my-8 sm:mt-32 sm:mb-24 " {...scrollFadeUp}>
     {title} <PaperPlaneEmoji icon={icon} />
   </motion.h2>
 );
@@ -33,8 +33,8 @@ const ProjectBlock: React.FC<{
   children: React.ReactNode;
 }> = ({ title, dates, description, href, children }) => (
   <motion.article className="relative my-16 sm:mt-26 sm:mb-16 group cursor-pointer overflow-hidden" {...scrollFadeUp}>
-    {href && <Link to={href} className="text-[20px] md:text-[24px] font-semibold text-[#191919]   absolute inset-0 z-10" aria-label={title} />}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
+    {href && <Link to={href} className="text-[20px] lg:text-[24px] font-semibold text-[#191919]   absolute inset-0 z-10" aria-label={title} />}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mb-8">
       <div>
          <div className="flex items-center gap-3">
       <h3 className="text-[24px] font-semibold">{title}</h3>
@@ -45,9 +45,9 @@ const ProjectBlock: React.FC<{
     </div>
 
 
-        <div className="text-[14px] md:text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
+        <div className="text-[14px] lg:text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
       </div>
-      <p className="text-[16px] md:text-[20px] font-medium text-[#191919]  md:justify-self-end leading-6 tracking-[0%] md:tracking-normal md:leading-7.5">
+      <p className="text-[16px] lg:text-[20px] font-medium text-[#191919]  lg:justify-self-end leading-6 tracking-[0%] lg:tracking-normal lg:leading-7.5">
         {description}
       </p>
     </div>
@@ -71,7 +71,7 @@ const OtherProjectCard: React.FC<{
     className="relative group cursor-pointer"
     {...scrollFadeUp}
   >
-    {href && <Link to={href} className="text-[20px] md:text-[24px] font-semibold text-[#191919] absolute inset-0 z-10" aria-label={title} />}
+    {href && <Link to={href} className="text-[20px] lg:text-[24px] font-semibold text-[#191919] absolute inset-0 z-10" aria-label={title} />}
     <div className="flex items-center gap-3">
       <h3 className="text-[24px] font-semibold">{title}</h3>
       <div className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
@@ -79,8 +79,8 @@ const OtherProjectCard: React.FC<{
       </div>
     </div>
 
-    <div className="text-[14px] md:text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
-    <p className="text-[16px] md:text-[20px] font-medium mt-3 leading-6 tracking-[0%] md:tracking-normal md:leading-7.5">{description}</p>
+    <div className="text-[14px] lg:text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
+    <p className="text-[16px] lg:text-[20px] font-medium mt-3 leading-6 tracking-[0%] lg:tracking-normal lg:leading-7.5">{description}</p>
 
 <div className="mt-4 rounded-xl overflow-hidden aspect-16/10">
   <img
@@ -139,7 +139,7 @@ const LandingPage: React.FC = () => (
     
     <SelectedProjectsHeader title={"Other Projects"} icon={"✈️"} />
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
       <OtherProjectCard
         title="Rukah"
         dates="Jan 2023 - Aug 2024"

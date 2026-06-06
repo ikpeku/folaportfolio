@@ -17,20 +17,12 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     isActive ? "text-[#191919] font-bold" : "text-[#3D3D4E] font-semibold"
   }`;
 
-const ease = [0.4, 0, 0.2, 1] as const;
 
-
-// const logoUnderlineVariants = {
-//   rest:   { bottom: 2,  transition: { duration: 0.35, ease } },
-//   hover:  { bottom: -8, transition: { duration: 0.35, ease } },
-//   active: { bottom: -8, transition: { duration: 0.35, ease } },
-// };
 
 const NavLabel = ({ isActive, label }: { isActive: boolean; label: string }) => (
   <motion.span
     className={isActive ? "underline decoration-2" : "hover:underline decoration-1"}
     style={{ textUnderlineOffset: isActive ? "8px" : "6px"}}
-    // whileHover={{ textUnderlineOffset: "16px" }}
     transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
   >
     {label}
@@ -48,10 +40,10 @@ const Header = () => {
           {() => (
             <motion.div
               className="relative inline-block"
-              initial={{ opacity: 0, y: -8 }}
+              initial={{ opacity: 0, y: -4 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              whileHover={{ scale: 1.04, transition: { duration: 0.25, ease } }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 200, damping: 20 } }}
             >
               <Assets.Logo />
             </motion.div>
@@ -61,7 +53,7 @@ const Header = () => {
 
       {/* Desktop nav */}
       <motion.nav
-        className="hidden md:flex items-center gap-10 text-[14px]"
+        className="hidden lg:flex items-center gap-10 text-[14px]"
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
@@ -75,7 +67,7 @@ const Header = () => {
 
       {/* Mobile hamburger */}
       <button
-      className="md:hidden"
+      className="lg:hidden"
         onClick={() => setOpen((v) => !v)}
         aria-label="Toggle menu"
       >
@@ -88,7 +80,7 @@ const Header = () => {
       <AnimatePresence>
         {open && (
           <motion.nav
-            className="md:hidden -mx-4 sm:mx-0 px-10 sm:px-6 pb-6 flex flex-col gap-5 text-[15px] text-center"
+            className="lg:hidden -mx-4 sm:mx-0 px-10 sm:px-6 pb-6 flex flex-col gap-5 text-[15px] text-center flex-1"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -97,16 +89,18 @@ const Header = () => {
             {NAV.map((n, i) => (
               <motion.div
                 key={n.label}
+                className="w-full"
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.06, duration: 0.2 }}
               >
                 <NavLink
                   to={n.to}
-                  className={navLinkClass}
                   onClick={() => setOpen(false)}
                 >
-                  {({ isActive }) => <NavLabel isActive={isActive} label={n.label} />}
+                 <span className={`flex items-center justify-center w-full py-4 px-4 rounded-xl font-semibold transition-colors duration-200 hover:bg-[#F3F4F6] hover:text-[#3D3D4E] active:bg-[#E8E8EE] active:text-[#191919]`}>
+                      {n.label}
+                    </span>
                 </NavLink>
               </motion.div>
             ))}

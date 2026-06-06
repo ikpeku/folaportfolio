@@ -26,7 +26,7 @@ const ImageCard = ({ caption, url = "zenith.app", className }: { caption: string
     <div className={`overflow-hidden ${className}`}>
       <img src={url} alt="" className="w-full h-full object-center" />
     </div>
-    <p className="text-center text-[14px] md:text-[16px] font-semibold max-w-md mx-auto leading-6">{caption}</p>
+    <p className="text-center text-[14px] lg:text-[16px] font-semibold max-w-md mx-auto leading-6">{caption}</p>
   </motion.div>
 );
 
@@ -57,12 +57,12 @@ const Rukah = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="pt-10 md:pt-16">
+    <div className="pt-10 lg:pt-16">
 
       <div className="flex gap-12 lg:gap-20 items-start">
 
         {/* ── Left: sticky info sidebar ── */}
-        <aside className="hidden md:flex shrink-0 sticky top-10 self-start w-56 lg:w-64 flex-col gap-5">
+        <aside className="hidden lg:flex shrink-0 sticky top-10 self-start w-56 lg:w-64 flex-col gap-5">
 
           <motion.h1 className="text-[28px] lg:text-[32px] font-semibold text-[#191919] " {...fadeUp(0.08)}>
             Rukah
@@ -126,7 +126,7 @@ const Rukah = () => {
         <main className="flex-1 min-w-0 flex flex-col">
 
           {/* Mobile: title + back (shown only on small screens) */}
-          <div className="md:hidden mb-2">
+          <div className="lg:hidden mb-2">
             <button onClick={() => navigate(-1)} className="group flex mb-4">
               <div className="bg-[#3D3D4E1F] px-4 py-2 rounded-3xl group-hover:bg-[#3D3D4E] inline-flex items-center gap-1.5 text-[13px] text-[#3D3D4E] hover:text-white transition-colors">
                 <div className="flex justify-center items-center border-2 font-bold border-[#3D3D4E] group-hover:border-white rounded-full w-6 h-6">←</div>
