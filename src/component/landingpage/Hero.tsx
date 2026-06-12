@@ -10,8 +10,8 @@ const fadeUp = (delay = 0) => ({
 });
 
 const Hero = () => (
-  <section id="home" className="flex gap-6 flex-col-reverse lg:flex-row lg:items-start lg:gap-10 pt-14 lg:pt-38.75 pb-20 mb-16 lg:mb-0 lg:pb-px [border-bottom:none] bg-[repeating-linear-gradient(90deg,#B1B1B8_0,#B1B1B8_4px,transparent_4px,transparent_8px)] bg-size-[100%_1px] bg-bottom bg-no-repeat ">
-    <div className="space-y-8 mt-2 lg:mb-10 lg:my-10 lg:max-w-1/2">
+  <section id="home" className="flex gap-2 flex-col-reverse lg:flex-row lg:items-start lg:gap-10 pt-14 lg:pt-38.75 pb-16.5 lg:mb-0 lg:pb-px [border-bottom:none] bg-[repeating-linear-gradient(90deg,#B1B1B8_0,#B1B1B8_4px,transparent_4px,transparent_8px)] bg-size-[100%_1px] bg-bottom bg-no-repeat ">
+    <div className="space-y-2 lg:space-y-8 mt-2 lg:mb-10 lg:my-10 lg:max-w-1/2">
       <motion.p
         className="font-medium leading-7.5 text-[20px] lg:text-[24px] lg:leading-9 "
         {...fadeUp(0.15)}

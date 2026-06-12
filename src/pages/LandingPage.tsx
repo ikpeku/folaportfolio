@@ -24,7 +24,7 @@ const scrollFadeUp = {
 // ——————————————————— Section components ———————————————————
 
 const SelectedProjectsHeader = ({ icon, title }: { icon: React.ReactNode; title: string }) => (
-  <motion.h2 className="text-[18px] lg:text-[20px] font-semibold my-8 sm:mt-32 sm:mb-24 " {...scrollFadeUp}>
+  <motion.h2 className=" text-[18px] lg:text-[20px] font-semibold  lg:mt-32 lg:mb-24 " {...scrollFadeUp}>
     {title} <PaperPlaneEmoji icon={icon} />
   </motion.h2>
 );
@@ -36,18 +36,17 @@ const ProjectBlock: React.FC<{
   href?: string;
   children: React.ReactNode;
 }> = ({ title, dates, description, href, children }) => (
-  <motion.article className="relative my-16 sm:mt-26 sm:mb-16 group cursor-pointer overflow-hidden" {...scrollFadeUp}>
+  <motion.article className="relative mb-16.5 lg:mt-26 lg:mb-16 group cursor-pointer overflow-hidden" {...scrollFadeUp}>
     {href && <Link to={href} className="text-[20px] lg:text-[24px] font-semibold text-[#191919]   absolute inset-0 z-10" aria-label={title} />}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mb-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mb-6 lg:mb-8">
       <div>
-         <div className="flex items-center gap-3">
-      <h3 className="text-[24px] font-semibold">{title}</h3>
-      <div className=" opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-       
-        <Assets.ArrowCircleRight />
-      </div>
-    </div>
+        <div className="flex items-center gap-3">
+          <h3 className="text-[20px] lg:text-[24px] font-semibold">{title}</h3>
+          <div className=" opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
 
+            <Assets.ArrowCircleRight />
+          </div>
+        </div>
 
         <div className="text-[14px] lg:text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
       </div>
@@ -76,24 +75,32 @@ const OtherProjectCard: React.FC<{
     {...scrollFadeUp}
   >
     {href && <Link to={href} className="text-[20px] lg:text-[24px] font-semibold text-[#191919] absolute inset-0 z-10" aria-label={title} />}
-    <div className="flex items-center gap-3">
-      <h3 className="text-[24px] font-semibold">{title}</h3>
-      <div className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-       <Assets.ArrowCircleRight />
+    <div className="grid grid-cols-1  gap-4 lg:gap-6 mb-6 lg:mb-8">
+
+      <div>
+        <div className="flex items-center gap-3">
+          <h3 className="text-[20px] lg:text-[24px] font-semibold">{title}</h3>
+          <div className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+            <Assets.ArrowCircleRight />
+          </div>
+        </div>
+        <div className="text-[14px] lg:text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
+
       </div>
+
+      <p className="text-[16px] lg:text-[20px] font-medium text-[#191919]  lg:justify-self-end leading-6 tracking-[0%] lg:tracking-normal lg:leading-7.5">
+        {description}
+      </p>
     </div>
 
-    <div className="text-[14px] lg:text-[16px] text-[#808080] font-semibold mt-0.5">{dates}</div>
-    <p className="text-[16px] lg:text-[20px] font-medium mt-3 leading-6 tracking-[0%] lg:tracking-normal lg:leading-7.5">{description}</p>
-
-<div className="mt-4 rounded-xl overflow-hidden aspect-16/10">
-  <img
-    src={src}
-    srcSet={srcSet}
-    alt=""
-    className="w-full h-full object-cover transition-transform duration-100 group-hover:scale-[1.03] group-hover:-skew-y-1"
-  />
-</div>
+    <div className=" rounded-xl overflow-hidden aspect-16/10">
+      <img
+        src={src}
+        srcSet={srcSet}
+        alt=""
+        className="w-full h-full object-cover transition-transform duration-100 group-hover:scale-[1.03] group-hover:-skew-y-1"
+      />
+    </div>
   </motion.div>
 );
 
@@ -105,7 +112,12 @@ const LandingPage: React.FC = () => (
   <div className="w-full ">
     <Hero />
 
-    <SelectedProjectsHeader title={"Selected Projects"} icon={<img src={Assets.SelectProjectOmoji} alt="" className="inline-block w-12 h-12 lg:w-16 lg:h-16" />}  />
+
+
+
+    <div className="mt-16.5 mb-11" >
+      <SelectedProjectsHeader title={"Selected Projects"} icon={<img src={Assets.SelectProjectOmoji} alt="" className="inline-block w-12 h-12 lg:w-16 lg:h-16" />} />
+    </div>
 
     <ProjectBlock
       title="Kibo School"
@@ -113,9 +125,9 @@ const LandingPage: React.FC = () => (
       description="Designing a learning platform to support a fully remote BSc. Computer Science Degree."
       href="/kibo-school"
     >
-      <img src={Assets.Kiboschool4x} 
-      // srcSet={Assets.KiboschoolSrcSet}
-       alt="" className="w-full h-full max-h-155 object-cover" />
+      <img src={Assets.Kiboschool4x}
+        // srcSet={Assets.KiboschoolSrcSet}
+        alt="" className="w-full h-full max-h-155 object-cover" />
     </ProjectBlock>
 
     <ProjectBlock
@@ -124,9 +136,9 @@ const LandingPage: React.FC = () => (
       description="Helping healthcare practitioners track their time so they can be appropriately reimbursed by the government."
       href="/time-study"
     >
-      <img src={Assets.Timestudy4x} 
-      // srcSet={Assets.TimestudySrcSet}
-       alt="" className="w-full h-full max-h-155 object-cover" />
+      <img src={Assets.Timestudy4x}
+        // srcSet={Assets.TimestudySrcSet}
+        alt="" className="w-full h-full max-h-155 object-cover" />
     </ProjectBlock>
 
     <ProjectBlock
@@ -135,13 +147,13 @@ const LandingPage: React.FC = () => (
       description="Helping Christians maintain consistent prayer practice through daily guided prayers & meditations."
       href="/behold"
     >
-      <img src={Assets.Beholdshot4x} 
-      // srcSet={Assets.BeholdshotSrcSet}
-       alt="" className="w-full h-full max-h-155 object-cover" />
+      <img src={Assets.Beholdshot4x}
+        // srcSet={Assets.BeholdshotSrcSet}
+        alt="" className="w-full h-full max-h-155 object-cover" />
     </ProjectBlock>
 
-    
-    <SelectedProjectsHeader title={"Other Projects"} icon={<img src={Assets.OtherProjectOmoji} alt="" className="inline-block w-12 h-12 lg:w-16 lg:h-16" />}  />
+
+    <SelectedProjectsHeader title={"Other Projects"} icon={<img src={Assets.OtherProjectOmoji} alt="" className="inline-block w-12 h-12 lg:w-16 lg:h-16" />} />
 
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
       <OtherProjectCard
@@ -161,7 +173,7 @@ const LandingPage: React.FC = () => (
         href="/zenith"
       />
     </div>
-       <Footer reversed={false} avatartype="space" />
+    <Footer reversed={false} avatartype="space" />
   </div>
 );
 
