@@ -2,6 +2,9 @@ import { ResumeIcon, EmailIcon, LinkedInIcon, Logo, ArrowCircleRight } from "./a
 import HeroBanner from "./herobanner.svg";
 
 import Kiboschool from "./kiboschool.png";
+import SelectProjectOmoji from "./selectprojectomoji.png";
+import OtherProjectOmoji from "./otherprojectomoji.png";
+import AboutProcessOmoji from "./aboutprocessomoji.png";
 
 
 import Kiboschool2x from "./Kiboschool@2x.png";
@@ -137,6 +140,9 @@ const RukahshotSrcSet = `${Rukahshot} 1x, ${Rukahshot2x} 2x, ${Rukahshot3x} 3x, 
 const ZenithshotSrcSet = `${Zenithshot} 1x, ${Zenithshot2x} 2x, ${Zenithshot3x} 3x, ${Zenithshot4x} 4x`;
 
 const Assets = {
+  SelectProjectOmoji,
+  OtherProjectOmoji,
+  AboutProcessOmoji,
   ArrowCircleRight,
   Logo,
   HeroBanner,

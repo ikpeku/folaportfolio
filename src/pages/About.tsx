@@ -68,7 +68,7 @@ const About = () => (
           Before designing digital products, I designed physical ones. It's interesting how both design spheres share many principles.
         </p>
         <p>
-          Beyond design, I love cosmology, emerging tech and techno! 🪐🤖💃
+          Beyond design, I love cosmology, emerging tech and techno!
         </p>
       </motion.div>
 
@@ -94,7 +94,7 @@ const About = () => (
       className="text-[24px] font-semibold text-center mb-10"
       {...fadeUp(0.1)}
     >
-      Design Process ⚙️
+      Design Process {<img src={Assets.AboutProcessOmoji} alt="" className="inline-block w-12 h-12 lg:w-16 lg:h-16" />} 
     </motion.h2>
 
 
@@ -119,7 +119,7 @@ const About = () => (
         <img
           src={Assets.Iceshot}
           alt="Iceberg illustration"
-          className="w-full max-w-sm object-cover rounded-sm sm:ml-22 z-50"
+          className="w-full h-full object-cover ml-12 z-[-50px]"
         />
       </motion.div>
 

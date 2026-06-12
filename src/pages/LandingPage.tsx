@@ -10,6 +10,10 @@ const PaperPlaneEmoji = ({ icon }: { icon: React.ReactNode }) => (
   <span aria-hidden className="inline-block ml-1 translate-y-px">{icon}</span>
 );
 
+
+
+
+
 const scrollFadeUp = {
   initial: { opacity: 0, y: 32 },
   whileInView: { opacity: 1, y: 0 },
@@ -101,7 +105,7 @@ const LandingPage: React.FC = () => (
   <div className="w-full ">
     <Hero />
 
-    <SelectedProjectsHeader title={"Selected Projects"} icon={"🚀"}  />
+    <SelectedProjectsHeader title={"Selected Projects"} icon={<img src={Assets.SelectProjectOmoji} alt="" className="inline-block w-12 h-12 lg:w-16 lg:h-16" />}  />
 
     <ProjectBlock
       title="Kibo School"
@@ -137,7 +141,7 @@ const LandingPage: React.FC = () => (
     </ProjectBlock>
 
     
-    <SelectedProjectsHeader title={"Other Projects"} icon={"✈️"} />
+    <SelectedProjectsHeader title={"Other Projects"} icon={<img src={Assets.OtherProjectOmoji} alt="" className="inline-block w-12 h-12 lg:w-16 lg:h-16" />}  />
 
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
       <OtherProjectCard
