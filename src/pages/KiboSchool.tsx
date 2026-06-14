@@ -4,6 +4,8 @@ import type { Transition } from "framer-motion";
 import Assets from "../assets";
 import Footer from "../component/Footer";
 import Carousel from "../component/Carousel";
+import CaseStudyHero from "../component/CaseStudyHero";
+import Divider from "../component/Divider";
 import { useNavigate } from "react-router";
 
 const fadeUp = (delay = 0) => ({
@@ -28,9 +30,6 @@ const SectionLabel = ({ children, className }: { children: React.ReactNode; clas
   <p className={`text-[10px] lg:text-[14px] tracking-widest text-[#6A6A6A] font-semibold ${className ?? ""}`}>{children}</p>
 );
 
-const Divider = ({ className }: { className?: string }) => (
-  <motion.div className={` border-t border-dashed border-neutral-200 ${className}`} {...fadeUp(0)} />
-);
 
 const ImageCard = ({ seed, className = "" }: { seed: string; className?: string }) => (
   <div className={`overflow-hidden ${className}`}>
@@ -95,38 +94,19 @@ const KiboSchool = () => {
   return (
     <div className="pt-10 lg:pt-16">
 
-      {/* ── Hero image ── */}
-      <motion.div {...fadeUp(0.05)}>
-        <div className="w-full aspect-16/8 bg-neutral-100 rounded-xl overflow-hidden">
-          <img src={Assets.Kiboschoolbanner} alt="Kibo banner" className="w-full h-full object-cover" />
-        </div>
-      </motion.div>
+{/* hero section */}
+      <CaseStudyHero
+        banner={Assets.Kiboschoolbanner}
+        bannerAlt="Kibo banner"
+        title="Helping students stay on top of assignments"
+        company="Kibo School"
+        dateRange="Oct 2022 - Apr 2024"
+        role="Solo Product Designer"
+        team="1 Product Manager & 2 Full Stack Developers"
+      />
 
-      {/* ── Title + meta ── */}
-      <motion.div className="mt-10" {...fadeUp(0.1)}>
-        <h1 className="text-[28px] lg:text-[36px] font-medium leading-tight italic">
-          Helping students stay on top of assignments
-        </h1>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:mt-5 mt-6">
-          {/* Company */}
-          <div>
-            <p className="text-[14px] font-semibold text-[#3D3D4E]">Kibo School</p>
-            <p className="text-[14px] lg:text-[16px] font-semibold text-[#6A6A6A] mt-1">Oct 2022 - Apr 2024</p>
-          </div>
-          {/* Role */}
-          <div>
-            <SectionLabel>ROLE</SectionLabel>
-            <p className="text-[14px] lg:text-[18px] font-medium leading-snug mt-1">Solo Product Designer</p>
-          </div>
-          {/* Team */}
-          <div>
-            <SectionLabel>TEAM</SectionLabel>
-            <p className="text-[14px] lg:text-[18px] font-medium leading-snug mt-1">1 Product Manager & 2 Full Stack Developers</p>
-          </div>
-        </div>
-      </motion.div>
 
-      <Divider className={"my-16"}/>
+
 
       {/* ── Two-column layout ── */}
       <div className="flex gap-12 items-start">
@@ -433,11 +413,11 @@ const KiboSchool = () => {
 
               <div className="space-y-5 max-w-2xl">
                 <LearnItem icon="🏫" text="Being at the same institution as our users was a significant advantage, feedback was quick to gather and grounded in real, ongoing experiences rather than recalled frustrations." />
-                      <Divider className={"my-4"} />
+                      <Divider variant="gradient" className="my-4" />
                 <LearnItem icon="🔀" text="Combining three feedback sources meant no single source carried too much weight. Each answered a different question: what were the issues, how widespread were they and what was causing them." />
-                 <Divider className={"my-4"} />
+                 <Divider variant="gradient" className="my-4" />
                 <LearnItem icon="📌" text="The submission status widget was scoped to the two platforms assignments are always required to be submitted on. Students submitting on additional platforms still experienced some uncertainty. Full platform coverage became a clear priority for the next iteration." />
-                <Divider className={"my-4"} />
+                <Divider variant="gradient" className="my-4" />
                 <LearnItem icon="🤔" text='Post launch feedback showed students wanted visibility beyond the next 5 upcoming assignments. We decided it would be worth coming back later on to figure out whether to expose more upcoming assignments or extend the upcoming assignments widget beyond assignments to "upcoming events".' />
               </div>
             </motion.div>

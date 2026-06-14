@@ -55,7 +55,7 @@ export const Logo = () => {
     >
       {/* hover: "to" SVG */}
       <motion.div
-        style={{ position: "absolute", top: 0, left: 0 }}
+        style={{ position: "absolute", top: 0, left: 0, willChange: "opacity" }}
         animate={{ opacity: hovered ? 1 : 0 }}
         transition={logoTransition}
       >
@@ -67,7 +67,7 @@ export const Logo = () => {
 
       {/* default: "from" SVG */}
       <motion.div
-        style={{ position: "absolute", top: 0, left: 0 }}
+        style={{ position: "absolute", top: 0, left: 0, willChange: "opacity" }}
         animate={{ opacity: hovered ? 0 : 1 }}
         transition={logoTransition}
       >

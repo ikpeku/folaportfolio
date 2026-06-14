@@ -4,6 +4,8 @@ import type { Transition } from "framer-motion";
 import Assets from "../assets";
 import Footer from "../component/Footer";
 import { useNavigate } from "react-router";
+import CaseStudyHero from "../component/CaseStudyHero";
+import Divider from "../component/Divider";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -27,10 +29,6 @@ const NAV_ITEMS = [
 // ── Shared primitives ─────────────────────────────────────────
 const SectionLabel = ({ children }: { children: React.ReactNode }) => (
   <p className="text-[10px] lg:text-[14px] tracking-widest text-[#6A6A6A] font-semibold">{children}</p>
-);
-
-const Divider = ({ className = "my-16" }: { className?: string }) => (
-  <motion.div className={`border-t border-dashed border-neutral-200 ${className}`} {...fadeUp(0)} />
 );
 
 
@@ -179,35 +177,17 @@ const Behold = () => {
   return (
     <div className="pt-10 lg:pt-16">
 
-      {/* ── Hero banner ── */}
-      <motion.div {...fadeUp(0.05)}>
-        <div className="w-full aspect-16/8 bg-neutral-100 rounded-xl overflow-hidden">
-          <img src={Assets.Beholdbanner} alt="Time Study banner" className="w-full h-full object-cover" />
-        </div>
-      </motion.div>
 
-      {/* ── Title + meta ── */}
-      <motion.div className="mt-10" {...fadeUp(0.1)}>
-        <h1 className="text-[28px] lg:text-[36px] font-medium leading-tight italic max-w-4xl">
-          Redesigning Reflections & Sharing around user context.
-        </h1>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:mt-5 mt-6">
-          <div>
-            <p className="text-[14px] font-semibold text-[#3D3D4E]">Behold</p>
-            <p className="text-[14px] lg:text-[16px] font-semibold text-[#6A6A6A] mt-1">Dec 2019 - Jan 2021</p>
-          </div>
-          <div>
-            <SectionLabel>ROLE</SectionLabel>
-            <p className="text-[14px] lg:text-[18px] font-medium leading-snug mt-1">Solo Product Designer</p>
-          </div>
-          <div>
-            <SectionLabel>TEAM</SectionLabel>
-            <p className="text-[14px] lg:text-[18px] font-medium leading-snug mt-1">2 Product Owners, 1 Product Manager, 2 Full Stack Developers</p>
-          </div>
-        </div>
-      </motion.div>
+      <CaseStudyHero
+        banner={Assets.Beholdbanner}
+        bannerAlt="Behold banner"
+        title="Redesigning Reflections & Sharing around user context."
+        company="Behold"
+        dateRange="Dec 2019 - Jan 2021"
+        role="Solo Product Designer"
+        team="2 Product Owners, 1 Product Manager, 2 Full Stack Developers"
+      />
 
-      <Divider />
 
       {/* ── Two-column layout ── */}
       <div className="flex gap-12 items-start">
