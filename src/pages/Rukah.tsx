@@ -3,6 +3,7 @@ import type { Transition } from "framer-motion";
 import Assets from "../assets";
 import Footer from "../component/Footer";
 import { useNavigate } from "react-router";
+import BackButton from "../utils/BackButton";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -69,12 +70,7 @@ const Rukah = () => {
           </motion.h1>
 
 
-          <motion.button onClick={() => navigate(-1)} className="group flex w-fit mt-6 mb-4" {...fadeUp(0.05)}>
-            <div className="bg-[#3D3D4E1F] px-4 py-2 rounded-3xl group-hover:bg-[#3D3D4E] inline-flex items-center gap-1.5 text-[13px] text-[#3D3D4E] hover:text-white transition-colors">
-              <div className="flex justify-center items-center border-2 font-bold border-[#3D3D4E] group-hover:border-white rounded-full w-6 h-6">←</div>
-              <span className="translate-x-2 group-hover:translate-x-0 transition-all duration-300">Back</span>
-            </div>
-          </motion.button>
+          <BackButton className="w-fit mt-6 mb-4" />
 
           <motion.div className="flex flex-col gap-4" {...fadeUp(0.12)}>
             <InfoBlock label="Role">
@@ -127,12 +123,7 @@ const Rukah = () => {
 
           {/* Mobile: title + back (shown only on small screens) */}
           <div className="lg:hidden mb-2">
-            <button onClick={() => navigate(-1)} className="group flex mb-4">
-              <div className="bg-[#3D3D4E1F] px-4 py-2 rounded-3xl group-hover:bg-[#3D3D4E] inline-flex items-center gap-1.5 text-[13px] text-[#3D3D4E] hover:text-white transition-colors">
-                <div className="flex justify-center items-center border-2 font-bold border-[#3D3D4E] group-hover:border-white rounded-full w-6 h-6">←</div>
-                <span>Back</span>
-              </div>
-            </button>
+            <BackButton className="mb-4" animated={false} />
             <h1 className="text-[28px] font-bold text-[#191919] mb-2">Rukah</h1>
           </div>
 

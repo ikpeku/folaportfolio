@@ -7,6 +7,7 @@ import Carousel from "../component/Carousel";
 import CaseStudyHero from "../component/CaseStudyHero";
 import Divider from "../component/Divider";
 import { useNavigate } from "react-router";
+import BackButton from "../utils/BackButton";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -116,12 +117,7 @@ const KiboSchool = () => {
 
           {/* Desktop */}
           <div className="hidden lg:flex flex-col gap-1 w-40 ">
-            <button onClick={() => navigate(-1)} className="group mb-6 flex">
-              <div className="bg-[#3D3D4E1F] px-4 py-2 rounded-3xl group-hover:bg-[#3D3D4E] inline-flex items-center gap-1.5 text-[13px] text-[#3D3D4E] hover:text-white transition-colors">
-                <div className="flex justify-center items-center border-2 font-bold border-[#3D3D4E] group-hover:border-white rounded-full w-6 h-6">←</div>
-                <span className="translate-x-2 group-hover:translate-x-0 transition-all duration-300">Back</span>
-              </div>
-            </button>
+            <BackButton className="mb-6" />
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}
@@ -160,7 +156,7 @@ const KiboSchool = () => {
 
 
           {/* ── Context ── */}
-          <section id="Context" className=" border-b-2 border-dashed border-neutral-200 pb-16">
+          <section id="Context" className=" ">
             <motion.div className="grid grid-cols-1" {...fadeUp(0.1)}>
               <div className="mb-4" >
                 <SectionLabel>Context</SectionLabel>
@@ -175,6 +171,8 @@ const KiboSchool = () => {
 
               <Carousel slides={SLIDES} />
             </motion.div>
+
+            <Divider variant="gradient" className="my-16" />
           </section>
 
           {/* <Divider /> */}
