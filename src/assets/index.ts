@@ -37,12 +37,23 @@ import Diamondicon from "./diamondicon.png";
 // kiboschool
 import Kiboschoolbanner from "./kiboschool/kilboschoolbanner.png";
 import Contextone from "./kiboschool/contextone.png";
+import Contexttwo from "./kiboschool/contexttwo.png";
+import Contextthree from "./kiboschool/contextthree.png";
+import Contextfour from "./kiboschool/contextfour.png";
+import Contextfive from "./kiboschool/contextfifth.png";
+import Contextsix from "./kiboschool/contextsix.png";
+import Contextseven from "./kiboschool/contextseven.png";
+import Contexteight from "./kiboschool/contexteight.png";
+import Contextnine from "./kiboschool/contextnine.png";
+import Contextten from "./kiboschool/contextten.png";
+
+
 import Issuetrackeranalysis from "./kiboschool/Issuetrackeranalysis.png"
 import Evaluatinganchortwo from "./kiboschool/evaluatinganchortwo.png"
 import Evaluatinganchorthree from "./kiboschool/evaluatinganchorthree.png"
-import Explodebannerone from "./kiboschool/explodebannerone.png"
 import Designtestingone from "./kiboschool/designtestingone.png"
 import Designtestingtwo from "./kiboschool/designtestingtwo.png"
+import Designtestingtwomobile from "./kiboschool/designtestingtwomobile.png"
 
 // zenith
 import Zenithone from "./zenith/zenithone.png"
@@ -185,12 +196,21 @@ const Assets = {
   // Kiboschool
   Kiboschoolbanner,
   Contextone,
+  Contexttwo,
+  Contextthree,
+  Contextfour, 
+  Contextfive,
+  Contextsix,
+  Contextseven ,
+  Contexteight,
+  Contextnine,
+  Contextten ,
   Issuetrackeranalysis,
   Evaluatinganchortwo,
   Evaluatinganchorthree,
-  Explodebannerone,
   Designtestingone,
   Designtestingtwo,
+  Designtestingtwomobile,
 
   // zenith
 Zenithone,
