@@ -14,15 +14,40 @@ interface CarouselProps {
   accentColor?: string;
 }
 
+// Desktop default follows the Figma 9-col grid: active card = 6, gap = 1, next-card peek = 2.
+const DESKTOP_SLIDE_WIDTH_PCT = (6 / 9) * 100;
+const DESKTOP_GAP_PCT = (1 / 9) * 100;
+
+const useIsDesktop = () => {
+  const [isDesktop, setIsDesktop] = useState(
+    () => typeof window !== "undefined" && window.matchMedia("(min-width: 1024px)").matches
+  );
+
+  useEffect(() => {
+    const mql = window.matchMedia("(min-width: 1024px)");
+    const onChange = () => setIsDesktop(mql.matches);
+    mql.addEventListener("change", onChange);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
+
+  return isDesktop;
+};
+
 const Carousel: React.FC<CarouselProps> = ({
   slides,
-  slideWidthPct = 70,
-  gapPx = 50,
+  slideWidthPct,
+  gapPx,
   autoplayMs = 3000,
   accentColor = "#4522A9",
 }) => {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const isDesktop = useIsDesktop();
+
+  const effectiveSlideWidthPct =
+    slideWidthPct ?? (isDesktop ? DESKTOP_SLIDE_WIDTH_PCT : 70);
+  const effectiveGap =
+    gapPx !== undefined ? `${gapPx}px` : isDesktop ? `${DESKTOP_GAP_PCT}%` : "50px";
 
   const go = useCallback(
     (next: number) => setIndex(Math.max(0, Math.min(slides.length - 1, next))),
@@ -49,15 +74,15 @@ const Carousel: React.FC<CarouselProps> = ({
       <div className="overflow-hidden rounded-xl">
         <motion.div
           className="flex"
-          style={{ gap: gapPx }}
-          animate={{ x: `calc(-${index} * (${slideWidthPct}% + ${gapPx}px))` }}
+          style={{ gap: effectiveGap }}
+          animate={{ x: `calc(-${index} * (${effectiveSlideWidthPct}% + ${effectiveGap}))` }}
           transition={{ duration: 0.42, ease: [0.32, 0.72, 0, 1] }}
         >
           {slides.map((s, i) => (
             <div
               key={s.title}
               className="shrink-0 rounded-xl overflow-hidden border-3"
-              style={{ width: `${slideWidthPct}%`, borderColor: accentColor }}
+              style={{ width: `${effectiveSlideWidthPct}%`, borderColor: accentColor }}
             >
               <div className="aspect-video bg-neutral-100 overflow-hidden">
                 <img
@@ -84,10 +109,10 @@ const Carousel: React.FC<CarouselProps> = ({
               key={i}
               onClick={() => go(i)}
               aria-label={`Slide ${i + 1}`}
-              className={`rounded-full transition-all duration-300 ${
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 i === index
-                  ? "w-5 h-2 bg-[#5D5FEF]"
-                  : "w-2 h-2 bg-[#5D5FEF]/20 hover:bg-[#5D5FEF]/50"
+                  ? " bg-[#5D5FEF]"
+                  : " bg-[#5D5FEF29]/20 hover:bg-[#5D5FEF]/50"
               }`}
             />
           ))}

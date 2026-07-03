@@ -34,7 +34,7 @@ const CaseStudyHero = ({
 }: CaseStudyHeroProps) => (
   <div>
     <motion.div {...fadeUp(0.05)}>
-      <div className="w-full aspect-16/8 bg-neutral-100 rounded-xl overflow-hidden">
+      <div className="w-full aspect-16/8 rounded-xl overflow-hidden border border-gray-100 ">
         <img src={banner} alt={bannerAlt} className="w-full h-full object-cover" />
       </div>
     </motion.div>

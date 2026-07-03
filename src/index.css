@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Avenir Next", sans-serif;
+  --font-sans: "Avenir Next";
 }
 
 @font-face {
@@ -89,6 +89,6 @@
 }
 
 body {
-  font-family: "Avenir Next", sans-serif !important;
+  font-family: "Avenir Next" !important;
   color: #191919;
 }

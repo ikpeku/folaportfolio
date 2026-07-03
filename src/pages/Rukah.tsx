@@ -60,10 +60,10 @@ const Rukah = () => {
   return (
     <div className="pt-10 lg:pt-16">
 
-      <div className="flex gap-12 lg:gap-20 items-start">
+      <div className="lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-20 items-start">
 
         {/* ── Left: sticky info sidebar ── */}
-        <aside className="hidden lg:flex shrink-0 sticky top-10 self-start w-56 lg:w-64 flex-col gap-5">
+        <aside className="hidden lg:flex lg:col-span-4 shrink-0 sticky top-10 self-start flex-col gap-5">
 
           <motion.h1 className="text-[28px] lg:text-[32px] font-semibold text-[#191919] " {...fadeUp(0.08)}>
             Rukah
@@ -119,7 +119,7 @@ const Rukah = () => {
         </aside>
 
         {/* ── Right: laptop mockups ── */}
-        <main className="flex-1 min-w-0 flex flex-col">
+        <main className="lg:col-span-8 min-w-0 flex flex-col">
 
           {/* Mobile: title + back (shown only on small screens) */}
           <div className="lg:hidden mb-2">

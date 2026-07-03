@@ -25,7 +25,7 @@ const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 const AppContent = () => {
   const location = useLocation();
   return (
-    <main className="min-h-screen font-sans antialiased relative">
+    <main className="min-h-screen antialiased relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-0">
         <Header />
         <AnimatePresence mode="wait">

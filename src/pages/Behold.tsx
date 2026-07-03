@@ -191,10 +191,10 @@ const Behold = () => {
 
 
       {/* ── Two-column layout ── */}
-      <div className="flex gap-12 items-start">
+      <div className="lg:grid lg:grid-cols-12 lg:gap-12 items-start">
 
         {/* ── Sticky sidebar ── */}
-        <aside className="hidden lg:block shrink-0 sticky top-10 self-start">
+        <aside className="hidden lg:block lg:col-span-3 shrink-0 sticky top-10 self-start">
 
           {/* Desktop */}
           <div className="hidden lg:flex flex-col gap-1 w-40">
@@ -227,7 +227,7 @@ const Behold = () => {
         </div>
 
         {/* ── Main content ── */}
-        <main className="flex-1 min-w-0 space-y-16">
+        <main className="lg:col-span-9 min-w-0 space-y-16">
 
           {/* ── Context ── */}
           <section id="Context">
