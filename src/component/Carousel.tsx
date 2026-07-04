@@ -84,12 +84,12 @@ const Carousel: React.FC<CarouselProps> = ({
               className="shrink-0 rounded-xl overflow-hidden border-3"
               style={{ width: `${effectiveSlideWidthPct}%`, borderColor: accentColor }}
             >
-              <div className="aspect-video bg-neutral-100 overflow-hidden">
+              <div className="aspect-video lg:aspect-auto lg:h-110.5 bg-neutral-100 overflow-hidden ">
                 <img
                   src={s.src}
                   alt={s.title}
                   className={`w-full h-full object-cover transition-transform duration-300 ${
-                    i !== index ? "scale-[1.04] brightness-75" : ""
+                    i !== index ? "scale-[1.04]" : ""
                   }`}
                 />
               </div>
@@ -98,11 +98,11 @@ const Carousel: React.FC<CarouselProps> = ({
         </motion.div>
       </div>
 
-      <p className="text-center text-[16px] text-[#262626] font-semibold mt-4">
+      <p className="text-center text-[24px] text-[#262626] font-semibold mt-6">
         {slides[index].title}
       </p>
 
-      <div className="relative flex items-center justify-center mt-3">
+      <div className="relative flex items-center justify-center mt-6">
         <div className="flex gap-2">
           {slides.map((_, i) => (
             <button
@@ -118,7 +118,7 @@ const Carousel: React.FC<CarouselProps> = ({
           ))}
         </div>
 
-        <div className="absolute right-0 flex gap-2">
+        <div className="absolute right-0 flex gap-10">
           <button
             onClick={() => go(index - 1)}
             disabled={index === 0}

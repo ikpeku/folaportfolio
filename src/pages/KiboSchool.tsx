@@ -151,16 +151,16 @@ const KiboSchool = () => {
       <div className="lg:grid lg:grid-cols-12 lg:gap-12 items-start">
 
         {/* ── Sticky sidebar — desktop: text labels, mobile: dot strip ── */}
-        <aside className="hidden lg:block lg:col-span-3 shrink-0 sticky top-10 self-start">
+        <aside className="hidden lg:block lg:col-span-3 shrink-0 sticky top-1/2 -translate-y-1/2 mt-[300px] ">
 
           {/* Desktop */}
-          <div className="hidden lg:flex flex-col gap-1 w-40 ">
+          <div className="hidden lg:flex flex-col gap-1 w-40  ">
             <BackButton className="mb-6" />
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className={`text-left text-[14px] font-semibold py-1 transition-colors duration-200 ${active === item.id ? "text-[#191919]" : "text-[#B1B1B8] hover:text-[#6A6A6A]"
+                className={`text-left text-[18px] leading-none tracking-normal font-semibold py-1 transition-colors duration-200 ${active === item.id ? "text-[#191919]" : "text-[#B1B1B8] hover:text-[#6A6A6A]"
                   }`}
               >
                 {item.title}
