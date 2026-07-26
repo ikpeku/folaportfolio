@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Header from "./component/Header";
@@ -11,16 +11,26 @@ import Behold from "./pages/Behold";
 import Rukah from "./pages/Rukah";
 import Zenith from "./pages/Zenith";
 
-const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 12 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -8 }}
-    transition={{ duration: 0.28, ease: "easeOut" }}
-  >
-    {children}
-  </motion.div>
-);
+const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // Client-side navigation keeps the previous scroll offset, so a page opened
+  // from a card far down the list would start part-way down. Reset as the new
+  // page mounts — AnimatePresence mode="wait" means the old one has already
+  // faded out, so the jump isn't visible.
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -8 }}
+      transition={{ duration: 0.28, ease: "easeOut" }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const AppContent = () => {
   const location = useLocation();
