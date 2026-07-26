@@ -56,7 +56,7 @@ const About = () => (
   <div className="pt-16 lg:pt-20">
 
     {/* ── Bio ── */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <motion.div className="space-y-5 font-medium text-[16px] lg:text-[20px] leading-6 tracking-[0%] lg:tracking-normal lg:leading-7.5" {...fadeUp(0.1)}>
         <p>
           Hi, I'm Folarin 👋. I've been designing digital products for 9 years. I approach problems from first principles to have the best chance at implementing effective solutions.

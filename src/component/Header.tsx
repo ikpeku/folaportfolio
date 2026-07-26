@@ -13,7 +13,7 @@ const NAV: NavItem[] = [
 ];
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-  `hover:text-[#191919] transition-colors text-[16px] ${
+  `hover:text-[#191919] transition-colors px-8 py-[18px] ${
     isActive ? "text-[#191919] font-bold" : "text-[#3D3D4E] font-semibold"
   }`;
 
@@ -21,10 +21,12 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 
 const NavLabel = ({ isActive, label }: { isActive: boolean; label: string }) => (
   <motion.span
-    className={isActive ? "underline decoration-2" : "hover:underline decoration-1"}
-    style={{ textUnderlineOffset: isActive ? "8px" : "6px"}}
+    className={isActive ? "underline decoration-2 underline-offset-4" : "hover:underline decoration-1 underline-offset-4"}
     transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
   >
+
+    {/* style={{ textUnderlineOffset: isActive ? "8px" : "6px"}} */}
+
     {label}
   </motion.span>
 );
@@ -42,8 +44,7 @@ const Header = () => {
               className="relative inline-block"
               initial={{ opacity: 0, y: -4 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 200, damping: 20 } }}
+              transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             >
               <Assets.Logo />
             </motion.div>
@@ -53,7 +54,7 @@ const Header = () => {
 
       {/* Desktop nav */}
       <motion.nav
-        className="hidden lg:flex items-center gap-10 text-[14px]"
+        className="hidden lg:flex items-center tracking-[0.5%]"
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
