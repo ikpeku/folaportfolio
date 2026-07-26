@@ -38,7 +38,19 @@ const SectionLabel = ({ children }: { children: React.ReactNode }) => (
 const ImageCard = ({ caption, url, className = "" }: { caption?: string; url: string, className?: string }) => (
   <motion.div className="w-full" {...fadeUp(0)}>
     <div className={`overflow-hidden ${className}`}>
-      <img src={url} alt="" className="w-full h-full object-center" />
+      {url.endsWith(".mp4") ? (
+        <video
+          src={url}
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-label={caption}
+          className="w-full h-full object-center"
+        />
+      ) : (
+        <img src={url} alt="" className="w-full h-full object-center" />
+      )}
     </div>
     {caption && <p className="text-[#6A6A6A] text-center text-[14px] lg:text-[16px] font-medium max-w-md mx-auto mt-4">{caption}</p>}
   </motion.div>

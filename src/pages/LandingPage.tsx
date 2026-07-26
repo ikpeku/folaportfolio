@@ -93,12 +93,12 @@ const OtherProjectCard: React.FC<{
       </p>
     </div>
 
-    <div className=" rounded-xl overflow-hidden aspect-16/10">
+    <div className=" rounded-xl overflow-hidden aspect-16/10 transition-transform duration-100 group-hover:scale-[1.03] group-hover:-skew-y-1">
       <img
         src={src}
         srcSet={srcSet}
         alt=""
-        className="w-full h-full object-cover transition-transform duration-100 group-hover:scale-[1.03] group-hover:-skew-y-1"
+        className="w-full h-full object-cover"
       />
     </div>
   </motion.div>

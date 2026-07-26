@@ -25,7 +25,19 @@ const InfoBlock = ({ label, children }: { label: string; children: React.ReactNo
 const ImageCard = ({ caption, url = "zenith.app", className }: { caption: string; url?: string, className?: string }) => (
   <motion.div className="w-full" {...fadeUp(0)}>
     <div className={`overflow-hidden ${className}`}>
-      <img src={url} alt="" className="w-full h-full object-center" />
+      {url.endsWith(".mp4") ? (
+        <video
+          src={url}
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-label={caption}
+          className="w-full h-full object-center"
+        />
+      ) : (
+        <img src={url} alt="" className="w-full h-full object-center" />
+      )}
     </div>
     <p className="text-center text-[14px] lg:text-[16px] font-semibold max-w-md mx-auto leading-6">{caption}</p>
   </motion.div>
@@ -33,22 +45,22 @@ const ImageCard = ({ caption, url = "zenith.app", className }: { caption: string
 
 const SCREENS = [
   {
-    url: Assets.Rukahone, caption: "Search for vendors or view vendors by category",
+    url: Assets.Rukahseachvendor, caption: "Search for vendors or view vendors by category",
   },
   {
-    url: Assets.Rukahone,
+    url: Assets.Rukahvendorinfo,
     caption: "View vendor information & user generated reviews",
   },
   {
-    url: Assets.Rukahthree,
+    url: Assets.Rukahaddreviews,
     caption: "Add reviews",
   },
   {
-    url: Assets.Rukahfour,
+    url: Assets.Rukahaddvendor,
     caption: "Admins & users can add vendors",
   },
   {
-    url: Assets.Rukahfive,
+    url: Assets.Rukahapprovevendor,
     caption: "Admins can verify & approve vendors added by users",
   },
 ];
