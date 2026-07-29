@@ -10,7 +10,7 @@ const fadeUp = (delay = 0) => ({
 });
 
 const SectionLabel = ({ children }: { children: React.ReactNode }) => (
-  <p className="text-[10px] lg:text-[14px] tracking-widest text-[#6A6A6A] font-semibold">{children}</p>
+  <p className="text-xs lg:text-sm tracking-widest text-[#6A6A6A] font-semibold">{children}</p>
 );
 
 interface CaseStudyHeroProps {
@@ -40,19 +40,19 @@ const CaseStudyHero = ({
     </motion.div>
 
     <motion.div className="mt-10" {...fadeUp(0.1)}>
-      <h1 className="text-[28px] lg:text-[36px] font-medium leading-tight italic">{title}</h1>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:mt-5 mt-6">
+      <h1 className="text-3xl lg:text-4xl font-medium italic">{title}</h1>
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mt-6 lg:mt-10">
         <div>
-          <p className="text-[14px] font-semibold text-[#3D3D4E]">{company}</p>
-          <p className="text-[14px] lg:text-[16px] font-semibold text-[#6A6A6A] mt-1">{dateRange}</p>
+          <p className="text-2xl font-semibold text-[#3D3D4E]">{company}</p>
+          <p className="text-sm lg:text-base font-semibold text-[#6A6A6A] mt-2">{dateRange}</p>
         </div>
         <div>
           <SectionLabel>ROLE</SectionLabel>
-          <p className="text-[14px] lg:text-[18px] font-medium leading-snug mt-1">{role}</p>
+          <p className="text-base lg:text-lg font-medium mt-2">{role}</p>
         </div>
         <div>
           <SectionLabel>TEAM</SectionLabel>
-          <p className="text-[14px] lg:text-[18px] font-medium leading-snug mt-1">{team}</p>
+          <p className="text-base lg:text-lg font-medium mt-2">{team}</p>
         </div>
       </div>
     </motion.div>

@@ -151,16 +151,16 @@ const KiboSchool = () => {
       <div className="lg:grid lg:grid-cols-12 lg:gap-12 items-start">
 
         {/* ── Sticky sidebar — desktop: text labels, mobile: dot strip ── */}
-        <aside className="hidden lg:block lg:col-span-3 shrink-0 sticky top-1/2 -translate-y-1/2 mt-[300px] ">
+        <aside className="hidden lg:block lg:col-span-3 shrink-0 sticky top-1/2 -translate-y-1/2 mt-[300px]">
 
           {/* Desktop */}
-          <div className="hidden lg:flex flex-col gap-1 w-40  ">
+          <div className="hidden lg:flex flex-col gap-1 w-40 ">
             <BackButton className="mb-6" />
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className={`text-left text-[18px] leading-none tracking-normal font-semibold py-1 transition-colors duration-200 ${active === item.id ? "text-[#191919]" : "text-[#B1B1B8] hover:text-[#6A6A6A]"
+                className={`my-2 md:my-3 text-left text-[18px] leading-none tracking-normal font-semibold transition-colors duration-200 ${active === item.id ? "text-[#191919]" : "text-[#B1B1B8] hover:text-[#6A6A6A]"
                   }`}
               >
                 {item.title}
@@ -193,7 +193,7 @@ const KiboSchool = () => {
 
           {/* ── Context ── */}
           <section id="Context" className=" ">
-            <motion.div className="grid grid-cols-1 gap-10" {...fadeUp(0.1)}>
+            <motion.div className="grid grid-cols-1 gap-6" {...fadeUp(0.1)}>
               <SectionIntro label="Context" title="A learning platform to support a fully remote BSc. Computer Science Degree">
                 <p className="font-medium text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">Kibo School offers an Africa-focused, fully online BSc. in Computer Science. Students are dispersed across the continent — no campus, no in-person lectures, no face-to-face support structures.</p>
                 <p className="font-medium text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">I joined as a Product Manager embedded with the engineering team to redesign the core learning platform — the digital space students spend most of their academic lives in.</p>
@@ -263,14 +263,14 @@ const KiboSchool = () => {
               </p>
 
 
-              <div className="bg-[#F9FAFB] border-[#E5E5E5] p-4 lg:p-8 my-8 border-l-4 border-l-[#5D5FEF]">
+              <div className="bg-[#F9FAFB] border-[#E5E5E5] p-4 my-4 border-l-4 border-l-[#5D5FEF]">
                 <p className="text-[14px] italic tracking-widest text-[#6A6A6A] font-semibold mb-3">How might we...</p>
                 <p className="text-[16px] lg:text-[18px] italic font-semibold leading-6.75 text-[#3D3D4E]">
                   Give students a quick view of what assignments are due across all their courses?
                 </p>
               </div>
 
-              <div className="bg-[#F9FAFB] border-[#E5E5E5] p-4 lg:p-8 my-8 border-l-4 border-l-[#5D5FEF]">
+              <div className="bg-[#F9FAFB] border-[#E5E5E5] p-4 my-4 border-l-4 border-l-[#5D5FEF]">
                 <p className="text-[14px] italic tracking-widest text-[#6A6A6A] font-semibold mb-3">How might we...</p>
                 <p className="text-[16px] lg:text-[18px] italic font-semibold leading-6.75 text-[#3D3D4E]">
                   Give students a reliable way to confirm they've submitted their assignments in all required places?
@@ -296,7 +296,7 @@ const KiboSchool = () => {
 
                 <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-                  <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                  <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6">
                     <div className="flex items-center gap-2">
 
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -312,7 +312,7 @@ const KiboSchool = () => {
                     </p>
                   </div>
 
-                  <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                  <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6">
                     <div className="flex items-center gap-2">
 
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -329,7 +329,7 @@ const KiboSchool = () => {
                   </div>
 
 
-                  <div className="bg-[rgba(93, 95, 239, 0.03)] border border-[#5D5FEF] p-4 lg:p-8 ">
+                  <div className="bg-[rgba(93, 95, 239, 0.03)] border border-[#5D5FEF] p-4 lg:p-6">
                     <div className="flex items-center gap-2">
 
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -346,7 +346,7 @@ const KiboSchool = () => {
                     </p>
                   </div>
 
-                  <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                  <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6">
                     <div className="flex items-center gap-2">
 
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -362,7 +362,7 @@ const KiboSchool = () => {
                     </p>
                   </div>
 
-                  <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                  <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6">
                     <div className="flex items-center gap-2">
 
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -420,7 +420,7 @@ const KiboSchool = () => {
 
               </div>
 
-              <p className="my-6 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
+              <p className="my-6 lg:my-8 text-[14px] lg:text-[18px] leading-6.75 text-[#3D3D4E]">
                 The widget approach stood out because it solved both HMW statements without requiring any change in behaviour or an extra page to visit. Especially since we already had a status section on assignment pages.
               </p>
 
@@ -487,28 +487,28 @@ const KiboSchool = () => {
 
               <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6">
                   <p className="text-[14px] lg:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
                   <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Rating in students confidence that they know which assignments are due when across all courses.
                   </p>
                 </div>
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6">
                   <p className="text-[14px] lg:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
                   <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Rating in students confidence that they know which assignments are due when across all courses.
                   </p>
                 </div>
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6">
                   <p className="text-[14px] lg:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
                   <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Rating in students confidence that they know which assignments are due when across all courses.
                   </p>
                 </div>
 
-                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-8 ">
+                <div className="bg-[#F9FAFB] border border-[#E5E5E5] p-4 lg:p-6">
                   <p className="text-[14px] lg:text-[24px] tracking-widest text-[#5D5FEF] font-bold mb-3">3.97/5</p>
                   <p className="text-[14px] lg:text-[16px] font-medium leading-6.75 text-[#6A6A6A]">
                     Rating in students confidence that they know which assignments are due when across all courses.
